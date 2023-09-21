@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.menu {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  height: 95px;
+  width: 100%;
+  z-index: 60;
+
+  .menu-logo {
+    img {
+      width: 120px;
+    }
+  }
+
+  .menu-links {
+    color: $main-color-text;
+    max-width: 850px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Raleway-Medium', sans-serif;
+
+    .company-name {
+      font-family: 'Montserrat-Regular', sans-serif;
+    }
+  }
+}

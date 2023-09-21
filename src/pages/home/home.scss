@@ -1,0 +1,38 @@
+.home {
+  position: relative;
+
+  .section {
+    // height: 100vh;
+    min-height: 100vh;
+    // color: #fff;
+    position: relative;
+    z-index: 10;
+  }
+
+  .bg-image {
+    // height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: brightness(0.7);
+    background-image: url('../../assets/images/main-bg-home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // .gradient-overlay {
+  //   position: absolute;
+  //   top: -95px;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   background-image: linear-gradient(
+  //     to right,
+  //     rgba(0, 0, 0, 0.9),
+  //     rgba(0, 0, 0, 0.2)
+  //   );
+  //   z-index: -2;
+  // }
+}
