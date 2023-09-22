@@ -1,0 +1,12 @@
+.video-player {
+  text-align: center;
+  img {
+    max-width: 90%;
+    width: 1500px;
+    height: 700px;
+    object-fit: cover;
+    // width: 1400px;
+    // min-width: 700px;
+    // max-height: 900px;
+  }
+}

@@ -13,7 +13,9 @@ const Menu = () => {
         <Link to="/eventos">Eventos</Link>
         <Link to="/blog">Blog</Link>
         <Link to="/contacto">Contacto</Link>
-        <span className="company-name">EIE 2023</span>
+        <Link to="/" className="company-name">
+          <span>EIE 2023</span>
+        </Link>
       </div>
     </nav>
   );

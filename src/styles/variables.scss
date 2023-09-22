@@ -1,5 +1,7 @@
 $gradient-color-deep: #28538e;
 $gradient-color-soft: #5c85d0;
+$gradient-color-deep-sec: #186b38;
+$gradient-color-soft-sec: #3fbf55;
 $main-color-text: #fff;
 $soft-color-text: #ddd;
 // $main-bg: #5C85D0;
@@ -17,4 +19,22 @@ $dark-bg: #222b3c;
   font-family: 'Montserrat-Regular';
   src: url('../assets/fonts/Montserrat-Regular.otf') format('truetype');
   font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('../assets/fonts/Inter-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'AkzidenzGroteskBQ-Light';
+  src: url('../assets/fonts/AkzidenzGroteskBQ-Light.otf') format('truetype');
+  // font-weight: bold;
 }
