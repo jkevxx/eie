@@ -9,4 +9,11 @@
     // min-width: 700px;
     // max-height: 900px;
   }
+
+  video {
+    max-width: 90%;
+    width: 1500px;
+    height: 700px;
+    object-fit: cover;
+  }
 }

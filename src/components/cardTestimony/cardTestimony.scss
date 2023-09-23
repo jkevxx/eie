@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+.testimony {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  // width: 100%;
+
+  img {
+    width: 260px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  div {
+    // padding-top: 40px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      position: relative;
+      top: -30px;
+      left: -20px;
+    }
+
+    p {
+      width: 400px;
+      font-size: 24px;
+    }
+    h3 {
+      padding-top: 20px;
+      font-size: 32px;
+      font-weight: bold;
+      background: linear-gradient(
+        to bottom,
+        $gradient-color-soft 75%,
+        $gradient-color-deep 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import groupPeople from '../../assets/images/group-people.png';
 import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
+import CardTestimony from '../../components/cardTestimony/CardTestimony';
+import Form from '../../components/form/Form';
 import Lines from '../../components/lines/Lines';
+import Sponsor from '../../components/sponsor/Sponsor';
 import VideoPlayer from '../../components/video/VideoPlayer';
+import { testimonials } from '../../data';
 import './home.scss';
 
 const Home = () => {
@@ -21,7 +25,7 @@ const Home = () => {
       </section>
 
       <section className="section bg-image-section-2">
-        <div className="section-2-gradient-overlay"></div>
+        <div className="gradient-overlay"></div>
         <div className="section-2">
           <h1>
             ¿QUÉ ES <span>EIE?</span>
@@ -78,8 +82,29 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section section-4">
-        <h2>Nuestro</h2>
+      <section className="section bg-image-section-4">
+        <div className="gradient-overlay"></div>
+        <section className="section-4">
+          <div className="title">
+            <h1>NUESTROS</h1>
+            <p>TESTIMONIOS</p>
+          </div>
+
+          <div className="cards-testimony">
+            {testimonials.map((testimony) => (
+              <CardTestimony
+                name={testimony.name}
+                testimony={testimony.testimony}
+                image={testimony.image}
+                key={testimony.name}
+              />
+            ))}
+          </div>
+
+          <Form />
+
+          <Sponsor />
+        </section>
       </section>
     </div>
   );
