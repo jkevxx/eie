@@ -1,0 +1,30 @@
+.edition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 180px;
+
+  div {
+    position: relative;
+
+    h1 {
+      position: absolute;
+      width: 100%;
+      bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 58px;
+      z-index: 10;
+    }
+    img {
+      max-width: 450px;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+  }
+}

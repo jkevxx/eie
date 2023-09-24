@@ -19,12 +19,10 @@ const Home = () => {
       <section className="section bg-image"></section>
 
       <section className="section section-1">
-        <h1>
-          ¡TRANSFORMA TU VIDA y alcanza
-          <span>
-            tu independica económica <span>!</span>
-          </span>
-        </h1>
+        <h1>¡TRANSFORMA TU VIDA Y ALCANZA</h1>
+        <h2>
+          TU INDEPENDENCIA ECONÓMICA <span>!</span>
+        </h2>
       </section>
 
       <section className="section bg-image-section-2">
@@ -64,7 +62,7 @@ const Home = () => {
           </div>
 
           <div className="info">
-            <img src={groupPeople} alt="" />
+            <img src={groupPeople} alt="speakers" />
             <div className="info-details">
               <div className="dates">
                 <h1>09 DE NOVIEMBRE</h1>

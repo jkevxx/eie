@@ -1,0 +1,347 @@
+@import '../../styles/variables.scss';
+
+.events {
+  position: relative;
+
+  .section {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+    color: $main-color-text;
+  }
+
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    filter: brightness(0.6);
+    background-image: url('../../assets/images/main-bg-home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 130px;
+      // line-height: normal;
+      text-align: center;
+      user-select: none;
+      width: 90%;
+    }
+
+    h2 {
+      width: 70%;
+      font-size: 160px;
+      text-align: center;
+      line-height: 90%;
+      font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+      background: linear-gradient(
+        170deg,
+        $gradient-color-soft 35%,
+        $gradient-color-deep 80%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .bg-image-section-2 {
+    width: 100%;
+    background-image: url('../../assets/images/events/events-bg-1.png');
+    background-size: contain;
+    background-position: top 10px right 0px;
+    background-repeat: no-repeat;
+    background-color: #000;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.1)
+      );
+      z-index: 0;
+    }
+
+    .section-2 {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 100px;
+      position: relative;
+      z-index: 5;
+
+      h1 {
+        font-size: 140px;
+      }
+
+      h2 {
+        font-size: 150px;
+        text-align: center;
+        margin-top: -50px;
+        font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+        background: linear-gradient(
+          to bottom,
+          $gradient-color-soft 35%,
+          $gradient-color-deep 80%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        width: 620px;
+        font-size: 26px;
+        line-height: 40px;
+        text-align: left;
+      }
+    }
+  }
+
+  .bg-image-section-3 {
+    width: 100%;
+    min-height: 88vh;
+    background-image: url('../../assets/images/events/events-bg-2.png');
+    background-size: contain;
+    background-position: top 0px left 0px;
+    background-repeat: no-repeat;
+    background-color: #000;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.1)
+      );
+      z-index: 0;
+    }
+
+    .section-3 {
+      height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      margin-right: 100px;
+      position: relative;
+      z-index: 5;
+
+      h1 {
+        font-size: 140px;
+      }
+
+      h2 {
+        font-size: 140px;
+        text-align: center;
+        margin-top: -50px;
+        font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+        background: linear-gradient(
+          to bottom,
+          $gradient-color-soft 35%,
+          $gradient-color-deep 80%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        width: 650px;
+        font-size: 26px;
+        line-height: 40px;
+        text-align: right;
+      }
+    }
+  }
+
+  .bg-image-section-4 {
+    width: 100%;
+    height: 1650px;
+    background-image: url('../../assets/images/bg-section-4.png');
+    background-size: 1600px auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #06090d;
+    // z-index: 10;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 9, 13, 1) 5%,
+        rgba(40, 83, 142, 0.9) 74%
+      );
+      z-index: 0;
+    }
+
+    .section-4 {
+      position: relative;
+      z-index: 5;
+
+      .gallery {
+        width: 100%;
+        margin: 0 auto;
+        columns: 3;
+        margin-top: 120px;
+        max-width: 1200px;
+      }
+    }
+  }
+
+  .section-5 {
+    position: relative;
+    width: 100%;
+    height: 1250px;
+    background-color: #06090d;
+
+    .section-5-content {
+      position: relative;
+      z-index: 10;
+
+      .title {
+        padding: 50px 0px 0px 100px;
+        width: 850px;
+
+        h1 {
+          font-size: 100px;
+        }
+        h2 {
+          font-size: 120px;
+          margin-top: -40px;
+          text-align: right;
+          font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+          background: linear-gradient(
+            to bottom,
+            $gradient-color-soft 35%,
+            $gradient-color-deep 80%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  .bg-image-section-6 {
+    width: 100%;
+    // min-height: 88vh;
+    background-image: url('../../assets/images/events/events-bg-2.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #000;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #28538e66;
+      z-index: 0;
+    }
+
+    .section-6 {
+      position: relative;
+      z-index: 5;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .title {
+        h1 {
+          max-width: 950px;
+          width: 100%;
+          font-size: 80px;
+          text-align: center;
+          line-height: 90%;
+        }
+
+        p {
+          max-width: 950px;
+          width: 100%;
+          text-align: center;
+          font-size: 26px;
+          margin-top: 20px;
+        }
+      }
+
+      img {
+        max-width: 800px;
+      }
+    }
+  }
+
+  .section-7 {
+    position: relative;
+    width: 100%;
+    height: 3400px;
+    background-color: #06090d;
+
+    .section-7-content {
+      position: relative;
+      z-index: 10;
+
+      .title {
+        padding: 100px 0px 0px 100px;
+        h1 {
+          font-size: 100px;
+          line-height: 90%;
+        }
+
+        h2 {
+          font-size: 120px;
+          margin-top: -20px;
+          margin-left: 200px;
+          // text-align: right;
+          font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+          background: linear-gradient(
+            to bottom,
+            $gradient-color-soft 35%,
+            $gradient-color-deep 80%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .speakers {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        div {
+          text-align: center;
+          margin-top: 80px;
+
+          h2 {
+            font-size: 60px;
+          }
+        }
+
+        .spekaer-2 {
+          margin-top: 160px;
+        }
+
+        img {
+          max-width: 1500px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

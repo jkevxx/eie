@@ -1,6 +1,6 @@
-import sponsorsImage1 from '../../assets/images/sponsor-icons-1.png';
-import sponsorsImage2 from '../../assets/images/sponsor-icons-2.png';
-import sponsorsImage3 from '../../assets/images/sponsor-icons-3.png';
+import sponsorsImage1 from '../../assets/images/sponsors/sponsor-icons-1.png';
+import sponsorsImage2 from '../../assets/images/sponsors/sponsor-icons-2.png';
+import sponsorsImage3 from '../../assets/images/sponsors/sponsor-icons-3.png';
 import strategic from '../../assets/images/strategic-alliances.png';
 import './sponsor.scss';
 

@@ -59,3 +59,59 @@ export const articles = [
     link: "https://www.eltiempo.com/empresas/evolucionar-a-mentalidad-triunfadora-el-llamado-a-participar-en-la-eie-20211127",
   }
 ]
+
+export const editions = [
+  {
+    id: "1",
+    name: "1ª EDICIÓN",
+    image: "./src/assets/images/events/edicion-1.png"
+  },
+  {
+    id: "2",
+    name: "2ª EDICIÓN",
+    image: "./src/assets/images/events/edicion-2.png"
+  },
+  {
+    id: "3",
+    name: "3ª EDICIÓN",
+    image: "./src/assets/images/events/edicion-3.png"
+  }
+]
+
+export const galleryEvents = [
+  {
+    id: "1",
+    image: "./src/assets/images/gallery/event-gallery-1.png",
+    name: "Fotografía de la edición 1",
+  },
+  {
+    id: "2",
+    image: "./src/assets/images/gallery/event-gallery-2.png",
+    name: "Fotografía de la edición 2",
+  },
+  {
+    id: "3",
+    image: "./src/assets/images/gallery/event-gallery-3.png",
+    name: "Fotografía de la edición 3",
+  },
+  {
+    id: "4",
+    image: "./src/assets/images/gallery/event-gallery-4.png",
+    name: "Fotografía de la edición 4",
+  },
+  {
+    id: "5",
+    image: "./src/assets/images/gallery/event-gallery-5.png",
+    name: "Fotografía de la edición 5",
+  },
+  {
+    id: "6",
+    image: "./src/assets/images/gallery/event-gallery-6.png",
+    name: "Fotografía de la edición 6",
+  },
+  {
+    id: "7",
+    image: "./src/assets/images/gallery/event-gallery-7.png",
+    name: "Fotografía de la edición 7",
+  }
+]
