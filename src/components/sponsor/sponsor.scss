@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 .sponsors {
   display: flex;
   justify-content: center;
@@ -7,5 +8,47 @@
   img {
     max-width: 100%;
     user-select: none;
+  }
+
+  .sponsor {
+    position: relative;
+
+    div {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 10%;
+
+      h1 {
+        font-size: 100px;
+      }
+
+      p {
+        font-size: 100px;
+        font-weight: bold;
+        margin-top: -40px;
+        font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+        background: linear-gradient(
+          to bottom,
+          $gradient-color-soft 35%,
+          $gradient-color-deep 80%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .strategic-alliances {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+    background: linear-gradient(
+      to bottom,
+      $gradient-color-soft 35%,
+      $gradient-color-deep 80%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

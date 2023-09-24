@@ -1,0 +1,85 @@
+@import '../../styles/variables.scss';
+
+.article {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    h1 {
+      font-size: 80px;
+    }
+  }
+
+  .article-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 600px;
+    width: 100%;
+
+    .article-content {
+      width: 300px;
+      height: 100%;
+      position: relative;
+      gap: 20px;
+
+      img {
+        width: 100%;
+        filter: brightness(0.6);
+        object-fit: contain;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 5%;
+        height: 90px;
+        font-family: 'Inter-Bold', sans-serif;
+        font-size: 22px;
+      }
+
+      p {
+        margin-top: 5%;
+        text-align: center;
+        height: 92px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .article-btn {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .article-link {
+          height: 38px;
+          width: 140px;
+          font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+          background: linear-gradient(
+            to top,
+            $gradient-color-deep,
+            $gradient-color-soft
+          );
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: skew(-20deg);
+
+          span {
+            transform: skew(20deg);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

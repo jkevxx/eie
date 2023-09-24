@@ -1,0 +1,26 @@
+.talk {
+  display: flex;
+  position: relative;
+
+  img {
+    max-width: 100%;
+    width: 420px;
+    object-fit: cover;
+  }
+
+  div {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #000;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+    }
+  }
+}

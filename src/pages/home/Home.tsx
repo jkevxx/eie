@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom';
 import groupPeople from '../../assets/images/group-people.png';
 import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
+import Article from '../../components/article/Article';
+import CardTalk from '../../components/cardTalk/CardTalk';
 import CardTestimony from '../../components/cardTestimony/CardTestimony';
+import Footer from '../../components/footer/Footer';
 import Form from '../../components/form/Form';
 import Lines from '../../components/lines/Lines';
 import Sponsor from '../../components/sponsor/Sponsor';
 import VideoPlayer from '../../components/video/VideoPlayer';
-import { testimonials } from '../../data';
+import { talks, testimonials } from '../../data';
 import './home.scss';
 
 const Home = () => {
@@ -106,6 +109,51 @@ const Home = () => {
           <Sponsor />
         </section>
       </section>
+
+      <section className="section bg-image-section-5">
+        <div className="gradient-overlay"></div>
+        <section className="section-5">
+          <div className="title">
+            <h1>¿TE GUSTARÍA SER</h1>
+            <p>PATROCINADOR?</p>
+          </div>
+          <div className="info">
+            <p>
+              Participa en cada una de nuestras conferencias especializadas para
+              lograr una audiencia eficaz.{' '}
+            </p>
+            <button>
+              <span>Más Información</span>
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section className="section section-6">
+        <Lines />
+
+        <div className="section-6-content">
+          <div className="title">
+            <h1>
+              ¿SOBRE QUÉ <span>HABLAMOS?</span>
+            </h1>
+            <p>Conoce y aprende de los expertos en sus temas abordados.</p>
+          </div>
+
+          <div className="cards">
+            {talks.map((talk) => (
+              <CardTalk name={talk.name} image={talk.image} key={talk.name} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-7">
+        <Lines />
+        <Article />
+      </section>
+
+      <Footer />
     </div>
   );
 };
