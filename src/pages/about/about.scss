@@ -1,0 +1,314 @@
+@import '../../styles/variables.scss';
+
+.about {
+  position: relative;
+
+  .section {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+    color: $main-color-text;
+  }
+
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    filter: brightness(0.6);
+    background-image: url('../../assets/images/about/about-conference-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: brightness(0.4);
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    z-index: 5;
+    width: 100%;
+    max-width: 2500px;
+
+    h1 {
+      font-size: 40px;
+      // line-height: normal;
+      text-align: center;
+      user-select: none;
+      width: 90%;
+    }
+
+    h2 {
+      // width: 70%;
+      font-size: 140px;
+      text-align: center;
+      line-height: 90%;
+      user-select: none;
+    }
+
+    h3 {
+      font-size: 160px;
+      margin-top: -40px;
+      user-select: none;
+      text-align: center;
+      font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+      background: linear-gradient(
+        170deg,
+        $gradient-color-soft 35%,
+        $gradient-color-deep 80%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      span {
+        font-size: 160px;
+        // display: inline;
+        // font-weight: normal;
+        font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+        background: linear-gradient($main-color-text, $main-color-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .bg-image-section-2 {
+    width: 100%;
+    // min-height: 88vh;
+    background-image: url('../../assets/images/about/about-conference-2.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #000;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #28538e87;
+      z-index: 0;
+    }
+
+    .section-2 {
+      position: relative;
+      z-index: 5;
+      height: 100vh;
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 40px;
+
+      h1 {
+        font-size: 110px;
+
+        span {
+          font-size: 120px;
+          margin-top: -40px;
+          user-select: none;
+          font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+          background: linear-gradient(
+            to bottom,
+            $gradient-color-soft 15%,
+            $gradient-color-deep 80%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      p {
+        width: 650px;
+        font-size: 22px;
+        text-align: right;
+        line-height: 30px;
+      }
+
+      .article-link {
+        height: 48px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+        background: linear-gradient(
+          to top,
+          $gradient-color-deep,
+          $gradient-color-soft
+        );
+        transform: skew(-20deg);
+
+        span {
+          transform: skew(20deg);
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .bg-image-section-3 {
+    width: 100%;
+    height: 1853px;
+    background-image: url('../../assets/images/about/about-conference-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      );
+      z-index: 0;
+    }
+
+    .section-3 {
+      position: relative;
+      z-index: 5;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .mision {
+        padding: 00px 0px 0px 100px;
+        h1 {
+          font-size: 110px;
+          font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+        }
+
+        p {
+          width: 800px;
+          font-size: 28px;
+          text-align: left;
+          line-height: 40px;
+        }
+      }
+
+      .vision {
+        width: 100%;
+        padding: 0px 100px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        h1 {
+          font-size: 110px;
+          font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+        }
+
+        p {
+          width: 800px;
+          font-size: 30px;
+          text-align: right;
+          line-height: 40px;
+        }
+      }
+
+      .values {
+        max-width: 2400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        h1 {
+          font-size: 110px;
+          font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+        }
+
+        p {
+          width: 750px;
+          font-size: 30px;
+          text-align: center;
+          margin-top: -40px;
+          line-height: 40px;
+        }
+
+        img {
+          // max-width: 1200px;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .bg-image-section-4 {
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('../../assets/images/about/about-conference-4.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    .gradient-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.5)
+      );
+      z-index: 0;
+    }
+
+    .section-4 {
+      position: relative;
+      z-index: 5;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        font-size: 80px;
+      }
+
+      h2 {
+        font-size: 130px;
+        margin-top: -20px;
+        // user-select: none;
+        font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+        background: linear-gradient(
+          to bottom,
+          $gradient-color-soft 15%,
+          $gradient-color-deep 80%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .section-5 {
+    position: relative;
+    width: 100%;
+    // height: 1250px;
+    background-color: #06090d;
+
+    .section-5-content {
+      position: relative;
+      z-index: 10;
+
+      .gallery {
+        width: 100%;
+        margin: 0 auto;
+        columns: 3;
+        padding-top: 40px;
+        max-width: 1200px;
+      }
+    }
+  }
+}

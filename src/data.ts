@@ -115,3 +115,41 @@ export const galleryEvents = [
     name: "Fotografía de la edición 7",
   }
 ]
+
+export const galleryAbout = [
+  {
+    id: "1",
+    image: "./src/assets/images/gallery/about-gallery-1.png",
+    name: "Fotografía de la edición 1",
+  },
+  {
+    id: "2",
+    image: "./src/assets/images/gallery/about-gallery-2.png",
+    name: "Fotografía de la edición 2",
+  },
+  {
+    id: "3",
+    image: "./src/assets/images/gallery/about-gallery-3.png",
+    name: "Fotografía de la edición 3",
+  },
+  {
+    id: "4",
+    image: "./src/assets/images/gallery/about-gallery-4.png",
+    name: "Fotografía de la edición 4",
+  },
+  {
+    id: "5",
+    image: "./src/assets/images/gallery/about-gallery-5.png",
+    name: "Fotografía de la edición 5",
+  },
+  {
+    id: "6",
+    image: "./src/assets/images/gallery/about-gallery-6.png",
+    name: "Fotografía de la edición 6",
+  },
+  {
+    id: "7",
+    image: "./src/assets/images/gallery/about-gallery-7.png",
+    name: "Fotografía de la edición 7",
+  }
+]
