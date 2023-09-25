@@ -102,7 +102,7 @@ const Home = () => {
             ))}
           </div>
 
-          <Form />
+          <Form title="formulario" />
 
           <Sponsor />
         </section>
@@ -118,7 +118,7 @@ const Home = () => {
           <div className="info">
             <p>
               Participa en cada una de nuestras conferencias especializadas para
-              lograr una audiencia eficaz.{' '}
+              lograr una audiencia eficaz.
             </p>
             <button>
               <span>Más Información</span>

@@ -14,7 +14,6 @@
   .bg-image {
     position: absolute;
     width: 100%;
-    filter: brightness(0.6);
     background-image: url('../../assets/images/about/about-conference-1.png');
     background-size: cover;
     background-position: center;
@@ -64,8 +63,6 @@
 
       span {
         font-size: 160px;
-        // display: inline;
-        // font-weight: normal;
         font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
         background: linear-gradient($main-color-text, $main-color-text);
         -webkit-background-clip: text;
@@ -76,7 +73,6 @@
 
   .bg-image-section-2 {
     width: 100%;
-    // min-height: 88vh;
     background-image: url('../../assets/images/about/about-conference-2.png');
     background-size: cover;
     background-position: top;

@@ -10,6 +10,7 @@
 
   h1 {
     font-size: 60px;
+    text-transform: uppercase;
   }
 
   form {
@@ -28,9 +29,18 @@
         width: 600px;
         height: 38px;
         padding-left: 10px;
-        background-color: #9d9d9d;
         font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
         outline: none;
+      }
+
+      .contacto {
+        background-color: transparent;
+        border: 1px solid #ececec;
+        color: #fff;
+      }
+
+      .formulario {
+        background-color: #9d9d9d;
         border: none;
       }
 

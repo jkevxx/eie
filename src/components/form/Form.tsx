@@ -1,12 +1,22 @@
 import './form.scss';
-const Form = () => {
+
+type Props = {
+  title: string;
+};
+
+const Form = ({ title }: Props) => {
   return (
     <div className="form">
-      <h1>FORMULARIO</h1>
+      <h1>{title}</h1>
       <form>
         <div>
           <label htmlFor="name">Nombre</label>
-          <input name="name" type="text" placeholder="e.j. nombre" required />
+          <input
+            name="name"
+            type="text"
+            required
+            className={title === 'contacto' ? 'contacto' : 'formulario'}
+          />
         </div>
 
         <div>
@@ -14,14 +24,19 @@ const Form = () => {
           <input
             name="email"
             type="email"
-            placeholder="@example.com"
             required
+            className={title === 'contacto' ? 'contacto' : 'formulario'}
           />
         </div>
 
         <div>
           <label htmlFor="phone">Teléfono</label>
-          <input name="phone" type="text" placeholder="11-11-11-11" required />
+          <input
+            name="phone"
+            type="text"
+            required
+            className={title === 'contacto' ? 'contacto' : 'formulario'}
+          />
         </div>
 
         <div>
@@ -30,8 +45,8 @@ const Form = () => {
             name="message"
             rows={4}
             cols={40}
-            placeholder="Mensaje"
             required
+            className={title === 'contacto' ? 'contacto' : 'formulario'}
           ></textarea>
         </div>
         <div className="form-btn">
