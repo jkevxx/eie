@@ -29,7 +29,6 @@
 
     h1 {
       font-size: 130px;
-      // line-height: normal;
       text-align: center;
       user-select: none;
       width: 90%;
@@ -49,6 +48,7 @@
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   }
 
@@ -98,6 +98,7 @@
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       p {
@@ -156,6 +157,7 @@
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       p {
@@ -175,7 +177,6 @@
     background-position: top;
     background-repeat: no-repeat;
     background-color: #06090d;
-    // z-index: 10;
 
     .gradient-overlay {
       position: absolute;
@@ -232,6 +233,7 @@
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
       }
     }
@@ -239,7 +241,6 @@
 
   .bg-image-section-6 {
     width: 100%;
-    // min-height: 88vh;
     background-image: url('../../assets/images/events/events-bg-2.png');
     background-size: cover;
     background-position: top;
@@ -317,6 +318,7 @@
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
       }
 

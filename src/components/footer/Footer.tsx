@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import blogImage from '../../assets/images/sergio.png';
 import eieLogo from '../../assets/svg/eie-logo.svg';
@@ -5,10 +6,26 @@ import faceIcon from '../../assets/svg/face-icon.svg';
 import instaIcon from '../../assets/svg/instagram-icon.svg';
 import linkedinIcon from '../../assets/svg/linkedin.svg';
 import tiktokIcon from '../../assets/svg/tiktok.svg';
-
 import './footer.scss';
 
+type Email = {
+  email: string;
+};
+
+const initialFormState: Email = {
+  email: '',
+};
+
 const Footer = () => {
+  const [email, setEmail] = useState<Email>(initialFormState);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(email);
+    // axios.put(`/api/`, email);
+    setEmail(initialFormState);
+  };
+
   return (
     <>
       <section className="section-blog">
@@ -24,8 +41,18 @@ const Footer = () => {
               <h1>SUSCRÍBITE A</h1>
               <h2>NUESTRO BLOG</h2>
             </div>
-            <form>
-              <input type="email" placeholder="Escribe tu correo electrónico" />
+            <form onSubmit={handleSubmit} autoComplete={'off'}>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email.email || ''}
+                required
+                placeholder="Escribe tu correo electrónico"
+                onChange={(e) =>
+                  setEmail({ ...email, [e.target.name]: e.target.value })
+                }
+              />
               <div className="form-btn">
                 <button type="submit">
                   <span>Enviar</span>
