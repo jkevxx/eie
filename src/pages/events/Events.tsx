@@ -1,6 +1,6 @@
 import Edition from '../../components/edition/Edition';
 import Footer from '../../components/footer/Footer';
-import Gallery from '../../components/gallery/Gallery';
+// import Gallery from '../../components/gallery/Gallery';
 import History from '../../components/history/History';
 import Lines from '../../components/lines/Lines';
 import Ticket from '../../components/ticket/Ticket';
@@ -10,7 +10,7 @@ import speakers1 from '../../assets/images/speakers/speakers-1.png';
 import speakers2 from '../../assets/images/speakers/speakers-2.png';
 import speakers3 from '../../assets/images/speakers/speakers-3.png';
 import eventVideo from '../../assets/video/video-eventos.mp4';
-import { galleryEvents } from '../../data';
+// import { galleryEvents } from '../../data';
 import './events.scss';
 
 const Events = () => {
@@ -59,11 +59,6 @@ const Events = () => {
         <div className="gradient-overlay"></div>
         <div className="section-4">
           <Edition />
-          <div className="gallery">
-            {galleryEvents.map((event) => (
-              <Gallery image={event.image} name={event.name} key={event.id} />
-            ))}
-          </div>
         </div>
       </section>
 

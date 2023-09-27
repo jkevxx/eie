@@ -50,6 +50,7 @@ const Form = ({ title }: Props) => {
           <label htmlFor="name">Nombre</label>
           <input
             name="name"
+            id="name"
             type="text"
             required
             value={form.name || ''}
@@ -62,6 +63,7 @@ const Form = ({ title }: Props) => {
           <label htmlFor="email">Correo electrónico</label>
           <input
             name="email"
+            id="email"
             type="email"
             required
             value={form.email || ''}
@@ -73,6 +75,8 @@ const Form = ({ title }: Props) => {
         <div>
           <label htmlFor="phone">Teléfono</label>
           <Input
+            name="phone"
+            id="phone"
             defaultCountry="MX"
             className={title === 'contacto' ? 'contacto' : 'formulario'}
             maxLength={12}
@@ -87,6 +91,7 @@ const Form = ({ title }: Props) => {
           <label htmlFor="message">Mensaje</label>
           <textarea
             name="message"
+            id="message"
             rows={4}
             cols={40}
             value={form.message || ''}

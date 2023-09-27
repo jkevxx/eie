@@ -5,7 +5,7 @@ const Menu = () => {
   return (
     <nav className="menu">
       <div className="menu-logo">
-        <img src={eieLogo} alt="" />
+        <img src={eieLogo} alt="logo EIE" />
       </div>
       <div className="menu-links">
         <Link to="/">Inicio</Link>

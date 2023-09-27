@@ -27,18 +27,22 @@
     font-family: 'Raleway-Medium', sans-serif;
 
     .company-name {
-      font-family: 'Montserrat-Regular', sans-serif;
       height: 47px;
       width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat-Regular', sans-serif;
       background-image: linear-gradient(
         to top,
         $gradient-color-deep,
         $gradient-color-soft
       );
-      display: flex;
-      justify-content: center;
-      align-items: center;
       transform: skew(-20deg);
+
+      &:hover {
+        opacity: 0.9;
+      }
 
       span {
         transform: skew(20deg);

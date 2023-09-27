@@ -1,30 +1,48 @@
+@import '../../styles/variables.scss';
+
 .edition {
   display: flex;
   justify-content: center;
   align-items: center;
-  // flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
   padding-top: 180px;
 
-  div {
-    position: relative;
+  .edition-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
-    h1 {
-      position: absolute;
-      width: 100%;
-      bottom: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 58px;
-      z-index: 10;
+    .tab-active {
+      border: 1px solid $soft-color-text;
     }
-    img {
-      max-width: 450px;
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      filter: brightness(0.6);
+
+    div {
+      position: relative;
+      cursor: pointer;
+
+      h1 {
+        position: absolute;
+        width: 100%;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 58px;
+        z-index: 10;
+      }
+      img {
+        max-width: 450px;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        filter: brightness(0.6);
+      }
+    }
+
+    &:hover div:not(:hover) {
+      filter: brightness(50%) blur(1px);
     }
   }
 }
