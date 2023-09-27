@@ -62,17 +62,20 @@
         .article-link {
           height: 38px;
           width: 140px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
           background: linear-gradient(
             to top,
             $gradient-color-deep,
             $gradient-color-soft
           );
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
           transform: skew(-20deg);
+
+          &:hover {
+            opacity: 0.9;
+          }
 
           span {
             transform: skew(20deg);

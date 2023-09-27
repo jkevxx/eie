@@ -1,20 +1,24 @@
-import aimedPeople from '../../assets/images/events/aimed-at-events.png';
-import speakers1 from '../../assets/images/speakers/speakers-1.png';
-import speakers2 from '../../assets/images/speakers/speakers-2.png';
-import speakers3 from '../../assets/images/speakers/speakers-3.png';
 import Edition from '../../components/edition/Edition';
 import Footer from '../../components/footer/Footer';
 import Gallery from '../../components/gallery/Gallery';
 import History from '../../components/history/History';
 import Lines from '../../components/lines/Lines';
 import Ticket from '../../components/ticket/Ticket';
+
+import aimedPeople from '../../assets/images/events/aimed-at-events.png';
+import speakers1 from '../../assets/images/speakers/speakers-1.png';
+import speakers2 from '../../assets/images/speakers/speakers-2.png';
+import speakers3 from '../../assets/images/speakers/speakers-3.png';
+import eventVideo from '../../assets/video/video-eventos.mp4';
 import { galleryEvents } from '../../data';
 import './events.scss';
 
 const Events = () => {
   return (
     <div className="events">
-      <section className="section bg-image"></section>
+      <video className="section bg-video" autoPlay loop muted>
+        <source src={eventVideo} type="video/mp4" />
+      </video>
 
       <section className="section section-1">
         <h1>ESTÁS A SÓLO UNA IDEA</h1>

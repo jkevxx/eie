@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import groupPeople from '../../assets/images/group-people.png';
-import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
-import eieLogo from '../../assets/svg/eie-logo.svg';
+
 import Article from '../../components/article/Article';
 import CardTalk from '../../components/cardTalk/CardTalk';
 import CardTestimony from '../../components/cardTestimony/CardTestimony';
@@ -10,13 +8,20 @@ import Form from '../../components/form/Form';
 import Lines from '../../components/lines/Lines';
 import Sponsor from '../../components/sponsor/Sponsor';
 import VideoPlayer from '../../components/video/VideoPlayer';
+
+import groupPeople from '../../assets/images/group-people.png';
+import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
+import eieLogo from '../../assets/svg/eie-logo.svg';
+import homeVideo from '../../assets/video/video-index.mp4';
 import { talks, testimonials } from '../../data';
 import './home.scss';
 
 const Home = () => {
   return (
     <div className="home">
-      <section className="section bg-image"></section>
+      <video className="section bg-video" autoPlay loop muted>
+        <source src={homeVideo} type="video/mp4" />
+      </video>
 
       <section className="section section-1">
         <h1>¡TRANSFORMA TU VIDA Y ALCANZA</h1>

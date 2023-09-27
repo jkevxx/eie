@@ -77,6 +77,10 @@
         );
         transform: skew(-20deg);
 
+        &:hover {
+          opacity: 0.9;
+        }
+
         span {
           transform: skew(20deg);
           font-size: 18px;

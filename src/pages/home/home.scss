@@ -11,14 +11,11 @@
     color: $main-color-text;
   }
 
-  .bg-image {
+  .bg-video {
     position: absolute;
     width: 100%;
-    filter: brightness(0.6);
-    background-image: url('../../assets/images/main-bg-home.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    object-fit: cover;
+    z-index: -1;
   }
 
   .section-1 {
@@ -34,7 +31,11 @@
       line-height: normal;
       user-select: none;
       width: 80%;
+      @include adapted-content {
+        font-size: 100px;
+      }
     }
+
     h2 {
       font-size: 120px;
       width: 80%;
@@ -50,6 +51,10 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
 
+      @include adapted-content {
+        font-size: 90px;
+      }
+
       span {
         font-size: 160px;
         display: inline;
@@ -58,6 +63,10 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+
+        @include adapted-content {
+          font-size: 100px;
+        }
       }
     }
   }
@@ -95,6 +104,9 @@
       h1 {
         font-size: 140px;
         font-family: 'Inter-Regular', sans-serif;
+        @include adapted-content {
+          font-size: 100px;
+        }
 
         span {
           font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
@@ -115,6 +127,10 @@
         font-size: 28px;
         text-align: right;
         line-height: 45px;
+
+        @include adapted-content {
+          font-size: 22px;
+        }
       }
 
       .section-2-link {
@@ -132,9 +148,23 @@
         transform: skew(-20deg);
         margin-right: 15px;
 
+        &:hover {
+          opacity: 0.9;
+        }
+
+        @include adapted-content {
+          height: 60px;
+          width: 250px;
+        }
+
         span {
           transform: skew(20deg);
           font-size: 25px;
+          color: #fff;
+
+          @include adapted-content {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -216,10 +246,20 @@
           .dates {
             h1 {
               font-size: 70px;
+
+              @include adapted-content {
+                font-size: 60px;
+                text-align: right;
+              }
             }
+
             p {
               font-size: 28px;
               width: 500px;
+              @include adapted-content {
+                font-size: 24px;
+                text-align: right;
+              }
             }
           }
 
@@ -236,17 +276,20 @@
             .section-3-link {
               height: 46px;
               width: 230px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               font-family: 'Montserrat-Regular', sans-serif;
               background: linear-gradient(
                 to top,
                 $gradient-color-deep-sec,
                 $gradient-color-soft-sec
               );
-
-              display: flex;
-              justify-content: center;
-              align-items: center;
               transform: skew(-20deg);
+
+              &:hover {
+                opacity: 0.9;
+              }
 
               span {
                 transform: skew(20deg);
@@ -262,12 +305,16 @@
 
   .bg-image-section-4 {
     width: 100%;
-    height: 4000px;
+    height: 3900px;
     background-image: url('../../assets/images/bg-section-4.png');
     background-size: 1600px auto;
     background-position: top;
     background-repeat: no-repeat;
     background-color: #000;
+
+    @include adapted-content {
+      height: 3600px;
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -285,7 +332,12 @@
         padding: 100px 0px 20px 100px;
         h1 {
           font-size: 100px;
+
+          @include adapted-content {
+            font-size: 90px;
+          }
         }
+
         p {
           padding-left: 160px;
           margin-top: -40px;
@@ -340,7 +392,12 @@
         padding: 150px 0px 20px 100px;
         h1 {
           font-size: 100px;
+
+          @include adapted-content {
+            font-size: 90px;
+          }
         }
+
         p {
           margin-top: -40px;
           font-size: 125px;
@@ -354,6 +411,10 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content {
+            font-size: 100px;
+          }
         }
       }
 
@@ -387,6 +448,10 @@
             $gradient-color-soft
           );
           transform: skew(-20deg);
+
+          &:hover {
+            opacity: 0.9;
+          }
 
           span {
             transform: skew(20deg);
@@ -423,6 +488,10 @@
         h1 {
           font-size: 100px;
 
+          @include adapted-content {
+            font-size: 90px;
+          }
+
           span {
             font-size: 115px;
             font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
@@ -434,6 +503,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            @include adapted-content {
+              font-size: 100px;
+            }
           }
         }
 

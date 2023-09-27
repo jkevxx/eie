@@ -6,6 +6,7 @@ import faceIcon from '../../assets/svg/face-icon.svg';
 import instaIcon from '../../assets/svg/instagram-icon.svg';
 import linkedinIcon from '../../assets/svg/linkedin.svg';
 import tiktokIcon from '../../assets/svg/tiktok.svg';
+import footerVideo from '../../assets/video/data-tech-bg.mp4';
 import './footer.scss';
 
 type Email = {
@@ -64,7 +65,10 @@ const Footer = () => {
       </section>
 
       <footer className="section-footer">
-        <div className="bg-image-footer"></div>
+        <video className="bg-video-footer" autoPlay loop muted>
+          <source src={footerVideo} type="video/mp4" />
+        </video>
+
         <div className="gradient-overlay"></div>
         <div className="footer-container">
           <div className="container-section-1">

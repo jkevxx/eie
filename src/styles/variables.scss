@@ -42,3 +42,9 @@ $dark-bg: #25364ccc;
   src: url('../assets/fonts/AkzidenzGroteskBQ-XBold.otf') format('truetype');
   // font-weight: bold;
 }
+
+@mixin adapted-content {
+  @media (max-width: 1700px) {
+    @content;
+  }
+}
