@@ -153,3 +153,41 @@ export const galleryAbout = [
     name: "Fotografía de la edición 7",
   }
 ]
+
+export const iconsAbout = [
+  {
+    id: 1,
+    image: "./src/assets/images/about/execelente-icon.png",
+    name: "Excelente"
+  },
+  {
+    id: 2,
+    image: "./src/assets/images/about/social-icon.png",
+    name: "Responsabilidad socila"
+  },
+  {
+    id: 3,
+    image: "./src/assets/images/about/integridad-icon.png",
+    name: "Integridad"
+  },
+  {
+    id: 4,
+    image: "./src/assets/images/about/colaboracion-icon.png",
+    name: "Colaboración"
+  },
+  {
+    id: 5,
+    image: "./src/assets/images/about/compromiso-icon.png",
+    name: "Compromiso"
+  },
+  {
+    id: 6,
+    image: "./src/assets/images/about/superacion-icon.png",
+    name: "Superación"
+  },
+  {
+    id: 7,
+    image: "./src/assets/images/about/libertad-icon.png",
+    name: "Superación"
+  }
+]

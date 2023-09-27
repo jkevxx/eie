@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.values-icon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+
+  div {
+    width: 160px;
+    height: 320px;
+    background-color: #486b99cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:hover {
+      background-color: $gradient-color-deep;
+      cursor: pointer;
+    }
+
+    img {
+      width: 140px;
+      height: 110px;
+      object-fit: contain;
+    }
+  }
+}

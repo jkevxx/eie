@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import values from '../../assets/images/valores.png';
 import Footer from '../../components/footer/Footer';
 import Gallery from '../../components/gallery/Gallery';
 import Lines from '../../components/lines/Lines';
+import Values from '../../components/values/Values';
 import { galleryAbout } from '../../data';
 import './about.scss';
 
@@ -71,7 +71,7 @@ const About = () => {
               Nuestra empresa se guía por sólidos valores que son fundamentales
               en nuestra labor diaria:
             </p>
-            <img src={values} alt="valores de eie" />
+            <Values />
           </div>
         </div>
       </section>
