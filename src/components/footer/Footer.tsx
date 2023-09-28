@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import blogImage from '../../assets/images/sergio.png';
+import blogImage from '../../assets/images/sergio.webp';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import faceIcon from '../../assets/svg/face-icon.svg';
 import instaIcon from '../../assets/svg/instagram-icon.svg';
@@ -18,13 +18,13 @@ const initialFormState: Email = {
 };
 
 const Footer = () => {
-  const [email, setEmail] = useState<Email>(initialFormState);
+  const [emailValue, setEmailValue] = useState<Email>(initialFormState);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(email);
+    console.log(emailValue);
     // axios.put(`/api/`, email);
-    setEmail(initialFormState);
+    setEmailValue(initialFormState);
   };
 
   return (
@@ -45,13 +45,16 @@ const Footer = () => {
             <form onSubmit={handleSubmit} autoComplete={'off'}>
               <input
                 type="email"
-                id="email"
+                id="emailBlog"
                 name="email"
-                value={email.email || ''}
+                value={emailValue.email || ''}
                 required
                 placeholder="Escribe tu correo electrónico"
                 onChange={(e) =>
-                  setEmail({ ...email, [e.target.name]: e.target.value })
+                  setEmailValue({
+                    ...emailValue,
+                    [e.target.name]: e.target.value,
+                  })
                 }
               />
               <div className="form-btn">
@@ -75,28 +78,38 @@ const Footer = () => {
             <div className="social-networks">
               <p>Síguenos en nuestras redes sociales</p>
               <div className="social-icons">
-                <a href="https://www.instagram.com/eie.mx/" target="_blank">
-                  <img src={instaIcon} alt="" />
+                <a
+                  href="https://www.instagram.com/eie.mx/"
+                  target="_blank"
+                  aria-label="Instagram link"
+                >
+                  <img src={instaIcon} alt="instagram icon" />
                 </a>
                 <a
                   href="https://www.facebook.com/profile.php?id=100083817837197"
                   target="_blank"
+                  aria-label="Facebook link"
                 >
-                  <img src={faceIcon} alt="" />
+                  <img src={faceIcon} alt="facebook icon" />
                 </a>
-                <a href="https://www.tiktok.com/@eie.mx" target="_blank">
-                  <img src={tiktokIcon} alt="" />
+                <a
+                  href="https://www.tiktok.com/@eie.mx"
+                  target="_blank"
+                  aria-label="Tiktok link"
+                >
+                  <img src={tiktokIcon} alt="tiktok icon" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
                   target="_blank"
+                  aria-label="linkedin link"
                 >
-                  <img src={linkedinIcon} alt="" />
+                  <img src={linkedinIcon} alt="linkedin icon" />
                 </a>
               </div>
             </div>
             <div className="eie-logo">
-              <img src={eieLogo} alt={eieLogo} />
+              <img src={eieLogo} alt="EIE logo" />
             </div>
           </div>
           <div className="container-section-2">

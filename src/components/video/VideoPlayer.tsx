@@ -1,5 +1,5 @@
 import eieCommercial from '../../assets/video/EIE-anuncio.mp4';
-import videoCover from '../../assets/video/video-cover.png';
+import videoCover from '../../assets/video/video-cover.webp';
 import './videoPlayer.scss';
 
 const VideoPlayer = () => {

@@ -1,16 +1,14 @@
 import Edition from '../../components/edition/Edition';
 import Footer from '../../components/footer/Footer';
-// import Gallery from '../../components/gallery/Gallery';
 import History from '../../components/history/History';
 import Lines from '../../components/lines/Lines';
 import Ticket from '../../components/ticket/Ticket';
 
-import aimedPeople from '../../assets/images/events/aimed-at-events.png';
-import speakers1 from '../../assets/images/speakers/speakers-1.png';
-import speakers2 from '../../assets/images/speakers/speakers-2.png';
-import speakers3 from '../../assets/images/speakers/speakers-3.png';
+import aimedPeople from '../../assets/images/events/aimed-at-events.webp';
+import speakers1 from '../../assets/images/speakers/speakers-1.webp';
+import speakers2 from '../../assets/images/speakers/speakers-2.webp';
+import speakers3 from '../../assets/images/speakers/speakers-3.webp';
 import eventVideo from '../../assets/video/video-eventos.mp4';
-// import { galleryEvents } from '../../data';
 import './events.scss';
 
 const Events = () => {
@@ -96,15 +94,15 @@ const Events = () => {
           <div className="speakers">
             <div className="speaker-1">
               <h2>3RA EDICIÓN</h2>
-              <img src={speakers1} alt={speakers1} />
+              <img src={speakers1} alt="speakers 1" />
             </div>
             <div className="spekaer-2">
               <h2>2DA EDICIÓN</h2>
-              <img src={speakers2} alt={speakers2} />
+              <img src={speakers2} alt="speakers 2" />
             </div>
             <div className="speaker-3">
               <h2>1RA EDICIÓN</h2>
-              <img src={speakers3} alt={speakers3} />
+              <img src={speakers3} alt="speakers 3" />
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import groupPeople from '../../assets/images/group-people.png';
+import groupPeople from '../../assets/images/group-people.webp';
 import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import Lines from '../lines/Lines';
@@ -30,9 +29,14 @@ const Ticket = () => {
             </div>
             <div className="more-info">
               <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
-              <Link to="/" className="section-3-link">
+              <a
+                href="#"
+                className="section-3-link"
+                target="_blank"
+                aria-label="compra de boletos link"
+              >
                 <span>Más Información</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

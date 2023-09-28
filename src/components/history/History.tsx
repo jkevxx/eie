@@ -1,9 +1,9 @@
-import icon01 from '../../assets/images/events/01-icon.png';
-import icon02 from '../../assets/images/events/02-icon.png';
-import icon03 from '../../assets/images/events/03-icon.png';
-import historyImg1 from '../../assets/images/events/events-history-1.png';
-import historyImg2 from '../../assets/images/events/events-history-2.png';
-import historyImg3 from '../../assets/images/events/events-history-3.png';
+import icon01 from '../../assets/images/events/01-icon.webp';
+import icon02 from '../../assets/images/events/02-icon.webp';
+import icon03 from '../../assets/images/events/03-icon.webp';
+import historyImg1 from '../../assets/images/events/events-history-1.webp';
+import historyImg2 from '../../assets/images/events/events-history-2.webp';
+import historyImg3 from '../../assets/images/events/events-history-3.webp';
 
 import './history.scss';
 

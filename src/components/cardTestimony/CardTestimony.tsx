@@ -1,6 +1,6 @@
 import './cardTestimony.scss';
 
-import doubleQuotation from '../../assets/images/double-quotation-marks.png';
+import doubleQuotation from '../../assets/images/double-quotation-marks.webp';
 
 type Props = {
   name: string;
@@ -15,7 +15,7 @@ const CardTestimony = ({ name, testimony, image }: Props) => {
       <div>
         <img src={doubleQuotation} alt={doubleQuotation} />
         <p>{testimony}</p>
-        <h3>{name}</h3>
+        <p className="testimony-name">{name}</p>
       </div>
     </div>
   );

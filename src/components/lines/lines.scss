@@ -1,4 +1,4 @@
-.section-3-lines {
+.section-lines {
   position: absolute;
   width: 40%;
   height: 95%;
@@ -8,12 +8,12 @@
 }
 
 .left-line {
-  @extend .section-3-lines;
+  @extend .section-lines;
   background-image: url('../../assets/svg/left-lines.svg');
 }
 
 .right-line {
   background-image: url('../../assets/svg/right-lines.svg');
   right: 0;
-  @extend .section-3-lines;
+  @extend .section-lines;
 }

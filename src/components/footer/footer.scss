@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .section-blog {
-  min-height: 80vh;
+  height: 90vh;
   position: relative;
   font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
   color: $main-color-text;
@@ -9,7 +9,7 @@
   .bg-image-blog {
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/images/asientos.png');
+    background-image: url('../../assets/images/asientos.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,15 +33,20 @@
   .blog-container {
     position: relative;
     z-index: 10;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    // align-items: center;
 
     .blog-image {
+      // width: 800px;
+      // max-height: 800px;
+      height: 90vh;
+
       img {
-        max-width: 100%;
-        width: 700px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -223,6 +228,20 @@
           justify-content: space-evenly;
           align-items: center;
           width: 250px;
+
+          a {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+      .eie-logo {
+        img {
+          width: 160px;
+          height: 85px;
         }
       }
     }

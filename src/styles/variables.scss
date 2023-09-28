@@ -11,36 +11,42 @@ $dark-bg: #25364ccc;
   font-family: 'Raleway-Medium';
   src: url('../assets/fonts/Raleway-Medium.ttf') format('truetype');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat-Regular';
   src: url('../assets/fonts/Montserrat-Regular.otf') format('truetype');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter-Regular';
   src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Inter-Bold';
   src: url('../assets/fonts/Inter-bold.ttf') format('truetype');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'AkzidenzGroteskBQ-Light';
   src: url('../assets/fonts/AkzidenzGroteskBQ-Light.otf') format('truetype');
   // font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'AkzidenzGroteskBQ-XBold';
   src: url('../assets/fonts/AkzidenzGroteskBQ-XBold.otf') format('truetype');
   // font-weight: bold;
+  font-display: swap;
 }
 
 @mixin adapted-content {

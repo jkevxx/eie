@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import edition1 from '../../assets/images/events/edicion-1.png';
-import edition2 from '../../assets/images/events/edicion-2.png';
-import edition3 from '../../assets/images/events/edicion-3.png';
+import edition1 from '../../assets/images/events/edicion-1.webp';
+import edition2 from '../../assets/images/events/edicion-2.webp';
+import edition3 from '../../assets/images/events/edicion-3.webp';
 
 import { galleryAbout, galleryEvents } from '../../data';
 import Gallery from '../gallery/Gallery';

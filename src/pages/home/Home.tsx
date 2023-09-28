@@ -9,7 +9,7 @@ import Lines from '../../components/lines/Lines';
 import Sponsor from '../../components/sponsor/Sponsor';
 import VideoPlayer from '../../components/video/VideoPlayer';
 
-import groupPeople from '../../assets/images/group-people.png';
+import groupPeople from '../../assets/images/group-people.webp';
 import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import homeVideo from '../../assets/video/video-index.mp4';
@@ -79,9 +79,14 @@ const Home = () => {
               </div>
               <div className="more-info">
                 <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
-                <Link to="/" className="section-3-link">
+                <a
+                  href="#"
+                  className="section-3-link"
+                  target="_blank"
+                  aria-label="compra de boletos link"
+                >
                   <span>Más Información</span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

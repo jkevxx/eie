@@ -1,4 +1,4 @@
-import contactImage from '../../assets/images/sergio-y-marco.png';
+import contactImage from '../../assets/images/sergio-y-marco.webp';
 import Footer from '../../components/footer/Footer';
 import Form from '../../components/form/Form';
 import Lines from '../../components/lines/Lines';

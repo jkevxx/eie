@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  // width: 100%;
 
   img {
     width: 260px;
@@ -12,8 +11,6 @@
   }
 
   div {
-    // padding-top: 40px;
-
     img {
       width: 150px;
       height: 150px;
@@ -27,7 +24,8 @@
       width: 400px;
       font-size: 24px;
     }
-    h3 {
+
+    .testimony-name {
       padding-top: 20px;
       font-size: 32px;
       font-weight: bold;
@@ -38,6 +36,7 @@
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   }
 }
