@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import blogImage from '../../assets/images/sergio.webp';
+import blueberry from '../../assets/images/blueberry.gif';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import faceIcon from '../../assets/svg/face-icon.svg';
 import instaIcon from '../../assets/svg/instagram-icon.svg';
@@ -9,64 +8,9 @@ import tiktokIcon from '../../assets/svg/tiktok.svg';
 import footerVideo from '../../assets/video/data-tech-bg.mp4';
 import './footer.scss';
 
-type Email = {
-  email: string;
-};
-
-const initialFormState: Email = {
-  email: '',
-};
-
 const Footer = () => {
-  const [emailValue, setEmailValue] = useState<Email>(initialFormState);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(emailValue);
-    // axios.put(`/api/`, email);
-    setEmailValue(initialFormState);
-  };
-
   return (
     <>
-      <section className="section-blog">
-        <div className="bg-image-blog"></div>
-        <div className="gradient-overlay"></div>
-        <div className="blog-container">
-          <div className="blog-image">
-            <img src={blogImage} alt={blogImage} />
-          </div>
-
-          <div className="blog-content">
-            <div className="title">
-              <h1>SUSCRÍBITE A</h1>
-              <h2>NUESTRO BLOG</h2>
-            </div>
-            <form onSubmit={handleSubmit} autoComplete={'off'}>
-              <input
-                type="email"
-                id="emailBlog"
-                name="email"
-                value={emailValue.email || ''}
-                required
-                placeholder="Escribe tu correo electrónico"
-                onChange={(e) =>
-                  setEmailValue({
-                    ...emailValue,
-                    [e.target.name]: e.target.value,
-                  })
-                }
-              />
-              <div className="form-btn">
-                <button type="submit">
-                  <span>Enviar</span>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
       <footer className="section-footer">
         <video className="bg-video-footer" autoPlay loop muted>
           <source src={footerVideo} type="video/mp4" />
@@ -132,10 +76,10 @@ const Footer = () => {
                   <p>hola@eie.mx</p>
                 </div>
               </div>
-              <div className="privacity">
-                <p>Aviso de Privacidad</p>
-                <p>Cookies</p>
-                <p>Términos y Condiciones</p>
+              <div className="privacity-section">
+                <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link>
+                <Link to="/cookies">Cookies</Link>
+                <Link to="/terminos-y-condiciones">Términos y Condiciones</Link>
               </div>
             </div>
           </div>
@@ -144,9 +88,9 @@ const Footer = () => {
               <span>&copy;2023</span> EIE, Expo Independencia Económica Todos
               los Derechos reservados
             </p>
-            <p>
-              <span>WE MATERIALIZED</span> / BUSINESS IDEAS
-            </p>
+            <div className="footer-image">
+              <img src={blueberry} alt="we are blueberry" />
+            </div>
           </div>
         </div>
       </footer>

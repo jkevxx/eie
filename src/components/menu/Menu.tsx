@@ -1,21 +1,26 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import './menu.scss';
-const Menu = () => {
+
+type Props = {
+  colorName: string;
+};
+
+const Menu = ({ colorName }: Props) => {
   return (
     <nav className="menu">
       <div className="menu-logo">
         <img src={eieLogo} alt="logo EIE" />
       </div>
-      <div className="menu-links">
-        <Link to="/">Inicio</Link>
-        <Link to="/quienes-somos">Quiénes Somos</Link>
-        <Link to="/eventos">Eventos</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/contacto">Contacto</Link>
-        <Link to="/" className="company-name">
+      <div className={`menu-links ${colorName}`}>
+        <NavLink to="/">Inicio</NavLink>
+        <NavLink to="/quienes-somos">Quiénes Somos</NavLink>
+        <NavLink to="/eventos">Eventos</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/contacto">Contacto</NavLink>
+        <div className="company-name">
           <span>EIE 2023</span>
-        </Link>
+        </div>
       </div>
     </nav>
   );

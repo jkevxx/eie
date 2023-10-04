@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.speaker-card {
+  width: 320px;
+  // height: 400px;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .speaker-description {
+    display: none;
+    // display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #486b99f1;
+    position: absolute;
+    top: 0;
+
+    p {
+      position: relative;
+      top: 10%;
+      padding: 12px;
+      font-size: 18px;
+      line-height: 28px;
+      font-family: 'Inter-Regular', sans-serif;
+    }
+
+    .speaker-name {
+      width: 100%;
+      position: relative;
+      bottom: -12%;
+
+      span {
+        font-size: 20px;
+        font-family: 'Inter-Bold', sans-serif;
+      }
+    }
+  }
+
+  &:hover {
+    .speaker-description {
+      display: block;
+    }
+  }
+}

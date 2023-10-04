@@ -31,6 +31,8 @@
       line-height: normal;
       user-select: none;
       width: 80%;
+      font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+
       @include adapted-content {
         font-size: 100px;
       }
@@ -53,20 +55,6 @@
 
       @include adapted-content {
         font-size: 90px;
-      }
-
-      span {
-        font-size: 160px;
-        display: inline;
-        font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
-        background: linear-gradient($main-color-text, $main-color-text);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-
-        @include adapted-content {
-          font-size: 100px;
-        }
       }
     }
   }
@@ -440,7 +428,7 @@
           font-size: 36px;
         }
 
-        button {
+        .section-5-link {
           display: flex;
           justify-content: center;
           align-items: center;

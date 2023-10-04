@@ -26,6 +26,14 @@ const History = () => {
         <img src={historyImg3} alt={historyImg3} />
       </div>
 
+      <div className="timeline">
+        <div className="line-1"></div>
+        <div className="line-2"></div>
+        <div className="line-3"></div>
+        <div className="line-4"></div>
+        <div className="arrow"></div>
+      </div>
+
       <div className="history-section-2">
         <div className="history-info">
           <div className="number-img">

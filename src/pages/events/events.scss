@@ -6,6 +6,7 @@
   .section {
     min-height: 100vh;
     position: relative;
+    width: 100%;
     z-index: 10;
     font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
     color: $main-color-text;
@@ -358,22 +359,57 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+
         div {
           text-align: center;
-          margin-top: 80px;
+          // margin-top: 80px;
 
           h2 {
             font-size: 60px;
           }
         }
 
-        .spekaer-2 {
-          margin-top: 160px;
+        .speaker-1 {
+          margin-top: 80px;
+
+          .speaker {
+            // max-width: 1500px;
+            // width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 28px;
+          }
         }
 
-        img {
-          max-width: 1500px;
-          width: 100%;
+        .speaker-2 {
+          margin-top: 160px;
+
+          .speaker {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 28px;
+          }
+
+          .speaker-section-2 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            grid-gap: 28px;
+            justify-content: center;
+          }
+        }
+
+        .speaker-3 {
+          margin-top: 160px;
+
+          .speaker {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            // grid-template-rows: repeat(2, auto);
+            grid-gap: 2px;
+          }
         }
       }
     }

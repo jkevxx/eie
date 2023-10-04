@@ -18,7 +18,7 @@
   }
 
   .menu-links {
-    color: $main-color-text;
+    // color: $main-color-text;
     max-width: 850px;
     width: 100%;
     display: flex;
@@ -41,12 +41,30 @@
       );
       transform: skew(-20deg);
 
-      &:hover {
-        opacity: 0.9;
-      }
-
       span {
+        color: #fff;
+        user-select: none;
         transform: skew(20deg);
+      }
+    }
+  }
+
+  .black {
+    color: #000;
+
+    a {
+      &:hover {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+  .white {
+    color: #fff;
+
+    a {
+      &:hover {
+        border-bottom: 1px solid #fff;
       }
     }
   }

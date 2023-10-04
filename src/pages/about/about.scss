@@ -34,7 +34,8 @@
       font-size: 40px;
       text-align: center;
       user-select: none;
-      width: 90%;
+      width: 100%;
+      font-family: 'Inter-Bold', sans-serif;
     }
 
     h2 {
@@ -42,6 +43,7 @@
       text-align: center;
       line-height: 90%;
       user-select: none;
+      font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
 
       @include adapted-content {
         font-size: 120px;
@@ -64,19 +66,6 @@
       background-clip: text;
       @include adapted-content {
         font-size: 140px;
-      }
-
-      span {
-        font-size: 160px;
-        font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
-        background: linear-gradient($main-color-text, $main-color-text);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-
-        @include adapted-content {
-          font-size: 140px;
-        }
       }
     }
   }
@@ -139,30 +128,6 @@
         font-size: 24px;
         text-align: right;
         line-height: 30px;
-      }
-
-      .article-link {
-        height: 48px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
-        background: linear-gradient(
-          to top,
-          $gradient-color-deep,
-          $gradient-color-soft
-        );
-        transform: skew(-20deg);
-
-        &:hover {
-          opacity: 0.9;
-        }
-
-        span {
-          transform: skew(20deg);
-          font-size: 18px;
-        }
       }
     }
   }

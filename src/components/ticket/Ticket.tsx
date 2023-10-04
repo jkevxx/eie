@@ -30,12 +30,12 @@ const Ticket = () => {
             <div className="more-info">
               <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
               <a
-                href="#"
+                href="https://eie-expo-tickets.blueberrytech.uk/tickets-sale"
                 className="section-3-link"
                 target="_blank"
                 aria-label="compra de boletos link"
               >
-                <span>Más Información</span>
+                <span>Comprar Boletos</span>
               </a>
             </div>
           </div>
