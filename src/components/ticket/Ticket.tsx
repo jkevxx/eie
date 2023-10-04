@@ -1,25 +1,34 @@
+import { useEffect } from 'react';
 import groupPeople from '../../assets/images/group-people.webp';
 import auditorioTelmex from '../../assets/svg/auditorio-telmex.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
 import Lines from '../lines/Lines';
 import './ticket.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Ticket = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="section ticket">
       <Lines />
 
       <div className="ticket-content">
-        <div className="icons">
+        <div data-aos="fade-down" className="icons">
           <img src={eieLogo} alt="eie logo" />
           <img src={auditorioTelmex} alt="auditorio telmex icon" />
           <span>3RA EDICIÓN</span>
         </div>
 
         <div className="info">
-          <img src={groupPeople} alt="speakers" />
+          <img data-aos="fade-right" src={groupPeople} alt="speakers" />
           <div className="info-details">
-            <div className="dates">
+            <div data-aos="fade-left" className="dates">
               <h1>09 DE NOVIEMBRE</h1>
               <p>
                 En EIE queremos inspirarte e impulsarte, junto a speakers
@@ -27,7 +36,7 @@ const Ticket = () => {
                 lograr tu Independencia Económica.
               </p>
             </div>
-            <div className="more-info">
+            <div data-aos="fade-up" className="more-info">
               <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
               <a
                 href="https://eie-expo-tickets.blueberrytech.uk/tickets-sale"

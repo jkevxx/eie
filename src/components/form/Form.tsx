@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Input from 'react-phone-number-input/input';
 import './form.scss';
+
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Props = {
   title: string;
@@ -42,10 +46,14 @@ const Form = ({ title }: Props) => {
     setForm(initialFormState);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="form">
-      <h1>{title}</h1>
-      <form onSubmit={handleSubmit} autoComplete={'off'}>
+      <h1 data-aos="fade-down">{title}</h1>
+      <form data-aos="fade-right" onSubmit={handleSubmit} autoComplete={'off'}>
         <div>
           <label htmlFor="name">Nombre</label>
           <input

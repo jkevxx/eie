@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import icon01 from '../../assets/images/events/01-icon.webp';
 import icon02 from '../../assets/images/events/02-icon.webp';
 import icon03 from '../../assets/images/events/03-icon.webp';
@@ -7,10 +8,18 @@ import historyImg3 from '../../assets/images/events/events-history-3.webp';
 
 import './history.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const History = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="history">
-      <div className="history-section-1">
+      <div data-aos="fade-down" className="history-section-1">
         <img src={historyImg1} alt={historyImg1} />
         <div className="history-info">
           <div className="number-img">
@@ -26,7 +35,7 @@ const History = () => {
         <img src={historyImg3} alt={historyImg3} />
       </div>
 
-      <div className="timeline">
+      <div data-aos="fade-up" className="timeline">
         <div className="line-1"></div>
         <div className="line-2"></div>
         <div className="line-3"></div>
@@ -34,7 +43,7 @@ const History = () => {
         <div className="arrow"></div>
       </div>
 
-      <div className="history-section-2">
+      <div data-aos="fade-right" className="history-section-2">
         <div className="history-info">
           <div className="number-img">
             <img src={icon01} alt="primer evento" />

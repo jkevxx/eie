@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Article from '../../components/article/Article';
 import BlogForm from '../../components/blog/BlogForm';
 import CardTalk from '../../components/cardTalk/CardTalk';
@@ -7,14 +8,22 @@ import Menu from '../../components/menu/Menu';
 import { talks } from '../../data';
 import './blog.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Blog = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Menu colorName="white" />
       <div className="blog">
         <section className="section section-1">
           <Lines />
-          <div className="section-1-content">
+          <div data-aos="fade-down" className="section-1-content">
             <h1>
               BIENVENIDO AL BLOG <span>EIE</span>
             </h1>
@@ -28,7 +37,7 @@ const Blog = () => {
           <Lines />
           <div className="section-2-content">
             <div className="title">
-              <h1>TEMÁTICA</h1>
+              <h1 data-aos="fade-right">TEMÁTICA</h1>
             </div>
 
             <div className="cards">

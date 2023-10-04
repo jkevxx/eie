@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import edition1 from '../../assets/images/events/edicion-1.webp';
 import edition2 from '../../assets/images/events/edicion-2.webp';
 import edition3 from '../../assets/images/events/edicion-3.webp';
@@ -7,6 +7,10 @@ import { galleryAbout, galleryEvents } from '../../data';
 import Gallery from '../gallery/Gallery';
 import './edition.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Edition = () => {
   const [selectedTab, setSelectedTab] = useState('tab1');
 
@@ -14,10 +18,15 @@ const Edition = () => {
     setSelectedTab(tab);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="edition">
       <div className="edition-tabs">
         <div
+          data-aos="fade-down"
           className={selectedTab === 'tab1' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab1')}
         >
@@ -26,6 +35,7 @@ const Edition = () => {
         </div>
 
         <div
+          data-aos="fade-down"
           className={selectedTab === 'tab2' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab2')}
         >
@@ -34,6 +44,7 @@ const Edition = () => {
         </div>
 
         <div
+          data-aos="fade-down"
           className={selectedTab === 'tab3' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab3')}
         >

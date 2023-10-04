@@ -8,8 +8,13 @@ import Menu from '../../components/menu/Menu';
 import Ticket from '../../components/ticket/Ticket';
 import './contact.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Contact = () => {
   useEffect(() => {
+    AOS.init();
     const hash = window.location.hash ? window.location.hash : '#contacto';
 
     const targetElement = document.querySelector(hash);
@@ -27,8 +32,8 @@ const Contact = () => {
         <section className="section section-1" id="contacto">
           <Lines />
 
-          <h1>¡TÚ ERES TU ACTIVO</h1>
-          <h2>
+          <h1 data-aos="fade-down">¡TÚ ERES TU ACTIVO</h1>
+          <h2 data-aos="fade-down">
             MÁS VALIOSO <span>!</span>
           </h2>
           <div className="title"></div>
@@ -38,7 +43,11 @@ const Contact = () => {
           <Lines />
 
           <div className="section-2-content" id="formulario">
-            <img src={contactImage} alt="Sergio y Marco" />
+            <img
+              data-aos="fade-right"
+              src={contactImage}
+              alt="Sergio y Marco"
+            />
 
             <Form title="contacto" />
           </div>

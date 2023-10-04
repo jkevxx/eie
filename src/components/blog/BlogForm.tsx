@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import blogImage from '../../assets/images/sergio.webp';
 import './blogForm.scss';
+
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type Email = {
   email: string;
@@ -19,21 +23,25 @@ const BlogForm = () => {
     setEmailValue(initialFormState);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <section className="section-blog">
       <div className="bg-image-blog"></div>
       <div className="gradient-overlay"></div>
       <div className="blog-container">
-        <div className="blog-image">
+        <div data-aos="fade-left" className="blog-image">
           <img src={blogImage} alt={blogImage} />
         </div>
 
         <div className="blog-content">
-          <div className="title">
+          <div data-aos="fade-up" className="title">
             <h1>SUSCRÍBITE A</h1>
             <h2>NUESTRO BLOG</h2>
           </div>
-          <form onSubmit={handleSubmit} autoComplete={'off'}>
+          <form data-aos="fade-up" onSubmit={handleSubmit} autoComplete={'off'}>
             <input
               type="email"
               id="emailBlog"

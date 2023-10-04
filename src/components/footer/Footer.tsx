@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import blueberry from '../../assets/images/blueberry.gif';
 import eieLogo from '../../assets/svg/eie-logo.svg';
@@ -8,7 +9,15 @@ import tiktokIcon from '../../assets/svg/tiktok.svg';
 import footerVideo from '../../assets/video/data-tech-bg.mp4';
 import './footer.scss';
 
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Footer = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <footer className="section-footer">
@@ -19,7 +28,7 @@ const Footer = () => {
         <div className="gradient-overlay"></div>
         <div className="footer-container">
           <div className="container-section-1">
-            <div className="social-networks">
+            <div data-aos="fade-up" className="social-networks">
               <p>Síguenos en nuestras redes sociales</p>
               <div className="social-icons">
                 <a
@@ -52,11 +61,13 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-            <div className="eie-logo">
+
+            <div data-aos="fade-up" className="eie-logo">
               <img src={eieLogo} alt="EIE logo" />
             </div>
           </div>
-          <div className="container-section-2">
+
+          <div data-aos="fade-down" className="container-section-2">
             <div className="section-2-menu">
               <h1>MENÚ</h1>
               <Link to="/">Inicio</Link>
@@ -83,7 +94,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="container-section-3">
+
+          <div data-aos="fade-down" className="container-section-3">
             <p>
               <span>&copy;2023</span> EIE, Expo Independencia Económica Todos
               los Derechos reservados
