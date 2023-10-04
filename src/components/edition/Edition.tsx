@@ -24,9 +24,8 @@ const Edition = () => {
 
   return (
     <div className="edition">
-      <div className="edition-tabs">
+      <div data-aos="fade-right" className="edition-tabs">
         <div
-          data-aos="fade-down"
           className={selectedTab === 'tab1' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab1')}
         >
@@ -35,7 +34,6 @@ const Edition = () => {
         </div>
 
         <div
-          data-aos="fade-down"
           className={selectedTab === 'tab2' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab2')}
         >
@@ -44,7 +42,6 @@ const Edition = () => {
         </div>
 
         <div
-          data-aos="fade-down"
           className={selectedTab === 'tab3' ? 'tab-active' : ''}
           onClick={() => handleTabClick('tab3')}
         >
