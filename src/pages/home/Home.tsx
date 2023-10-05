@@ -54,13 +54,11 @@ const Home = () => {
               darán esa inspiración e impulso para dar el siguiente paso hacia
               tu Independencia Económica.
             </p>
-            <Link
-              data-aos="fade-up"
-              to="/quienes-somos"
-              className="section-2-link"
-            >
-              <span>Conoce más</span>
-            </Link>
+            <div data-aos="fade-down">
+              <Link to="/quienes-somos" className="section-2-link">
+                <span>Conoce más</span>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -84,7 +82,7 @@ const Home = () => {
             <div className="info">
               <img data-aos="fade-right" src={groupPeople} alt="speakers" />
               <div className="info-details">
-                <div data-aos="fade-left" className="dates">
+                <div data-aos="fade-up" className="dates">
                   <h1>09 DE NOVIEMBRE</h1>
                   <p>
                     En EIE queremos inspirarte e impulsarte, junto a speakers

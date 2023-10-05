@@ -323,7 +323,7 @@
   .section-7 {
     position: relative;
     width: 100%;
-    height: 3400px;
+    height: 3100px;
     background-color: #06090d;
 
     .section-7-content {
@@ -362,7 +362,6 @@
 
         div {
           text-align: center;
-          // margin-top: 80px;
 
           h2 {
             font-size: 60px;
@@ -376,9 +375,8 @@
             // max-width: 1500px;
             // width: 100%;
             display: grid;
-            grid-template-columns: repeat(4, auto);
-            grid-template-rows: repeat(2, auto);
-            grid-gap: 28px;
+            grid-template-columns: repeat(4, 280px);
+            grid-gap: 30px;
           }
         }
 
@@ -387,15 +385,13 @@
 
           .speaker {
             display: grid;
-            grid-template-columns: repeat(4, auto);
-            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(4, 280px);
             grid-gap: 28px;
           }
 
           .speaker-section-2 {
             display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(2, 280px);
             grid-gap: 28px;
             justify-content: center;
           }
@@ -405,9 +401,9 @@
           margin-top: 160px;
 
           .speaker {
+            margin-top: 40px;
             display: grid;
-            grid-template-columns: repeat(5, auto);
-            // grid-template-rows: repeat(2, auto);
+            grid-template-columns: repeat(5, 250px);
             grid-gap: 2px;
           }
         }

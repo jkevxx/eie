@@ -28,7 +28,7 @@ const Ticket = () => {
         <div className="info">
           <img data-aos="fade-right" src={groupPeople} alt="speakers" />
           <div className="info-details">
-            <div data-aos="fade-left" className="dates">
+            <div data-aos="fade-up" className="dates">
               <h1>09 DE NOVIEMBRE</h1>
               <p>
                 En EIE queremos inspirarte e impulsarte, junto a speakers
