@@ -54,3 +54,9 @@ $dark-bg: #25364ccc;
     @content;
   }
 }
+
+@mixin adapted-content-mobile {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
