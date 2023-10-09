@@ -15,6 +15,7 @@ const initialFormState: Email = {
 };
 const BlogForm = () => {
   const [emailValue, setEmailValue] = useState<Email>(initialFormState);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,14 +28,31 @@ const BlogForm = () => {
     AOS.init();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
+
   return (
     <section className="section-blog">
       <div className="bg-image-blog"></div>
       <div className="gradient-overlay"></div>
       <div className="blog-container">
-        <div data-aos="fade-left" className="blog-image">
-          <img src={blogImage} alt={blogImage} />
-        </div>
+        {isMobile ? (
+          <></>
+        ) : (
+          <>
+            <div data-aos="fade-left" className="blog-image">
+              <img src={blogImage} alt={blogImage} />
+            </div>
+          </>
+        )}
 
         <div className="blog-content">
           <div data-aos="fade-up" className="title">

@@ -8,9 +8,17 @@
   height: 620px;
   margin-top: 40px;
 
+  @include adapted-content-mobile {
+    height: 500px;
+  }
+
   h1 {
     font-size: 60px;
     text-transform: uppercase;
+
+    @include adapted-content {
+      font-size: 30px;
+    }
   }
 
   form {
@@ -22,7 +30,6 @@
     div {
       display: flex;
       flex-direction: column;
-
       gap: 4px;
 
       input {
@@ -31,6 +38,11 @@
         padding-left: 10px;
         font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
         outline: none;
+
+        @include adapted-content-mobile {
+          width: 300px;
+          height: 32px;
+        }
       }
 
       .contacto {
@@ -51,6 +63,10 @@
         border: none;
         font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
         background-color: #9d9d9d;
+
+        @include adapted-content-mobile {
+          width: 300px;
+        }
       }
     }
 
@@ -81,10 +97,19 @@
           opacity: 0.9;
         }
 
+        @include adapted-content-mobile {
+          width: 140px;
+          height: 32px;
+        }
+
         span {
           transform: skew(20deg);
           font-size: 18px;
           color: $main-color-text;
+
+          @include adapted-content-mobile {
+            font-size: 14px;
+          }
         }
       }
     }

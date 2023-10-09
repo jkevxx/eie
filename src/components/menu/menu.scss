@@ -27,6 +27,11 @@
     img {
       width: 140px;
       height: 70px;
+
+      @include adapted-content-mobile {
+        width: 110px;
+        height: 70px;
+      }
     }
   }
 

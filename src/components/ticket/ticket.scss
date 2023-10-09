@@ -22,13 +22,27 @@
       height: 120px;
       padding-top: 80px;
 
+      @include adapted-content-mobile {
+        height: 60px;
+        margin-top: 10px;
+      }
+
       img {
         height: 80px;
+
+        @include adapted-content-mobile {
+          height: 40px;
+          width: 80px;
+        }
       }
 
       span {
         font-size: 60px;
         font-weight: bold;
+
+        @include adapted-content-mobile {
+          font-size: 20px;
+        }
       }
     }
 
@@ -39,11 +53,21 @@
       justify-content: space-evenly;
       align-items: center;
 
+      @include adapted-content-mobile {
+        flex-direction: column;
+        padding: 40px 10px;
+      }
+
       img {
         max-width: 900px;
         width: 100%;
         // max-height: 700px;
         // height: 100%;
+
+        @include adapted-content-mobile {
+          max-width: 500px;
+          margin-bottom: 40px;
+        }
       }
 
       .info-details {
@@ -104,6 +128,71 @@
             span {
               transform: skew(20deg);
               font-size: 19px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      // info responsive for mobile
+      .dates {
+        @include adapted-content-mobile {
+          margin-bottom: 40px;
+        }
+
+        h1 {
+          @include adapted-content-mobile {
+            font-size: 30px;
+            text-align: center;
+          }
+        }
+
+        p {
+          @include adapted-content-mobile {
+            font-size: 20px;
+            // width: 500px;
+          }
+        }
+      }
+
+      .more-info {
+        @include adapted-content-mobile {
+          // margin-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        p {
+          @include adapted-content-mobile {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            // width: 500px;
+          }
+        }
+
+        .section-3-link {
+          @include adapted-content-mobile {
+            height: 36px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat-Regular', sans-serif;
+            background: linear-gradient(
+              to top,
+              $gradient-color-deep-sec,
+              $gradient-color-soft-sec
+            );
+            transform: skew(-20deg);
+          }
+
+          span {
+            @include adapted-content-mobile {
+              transform: skew(20deg);
+              font-size: 14px;
               font-weight: bold;
             }
           }

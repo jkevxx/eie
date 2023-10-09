@@ -17,9 +17,13 @@ const Article = () => {
       <div data-aos="fade-up" className="title">
         <h1>ARTÍCULO</h1>
       </div>
-      <div data-aos="fade-right" className="article-body">
+      <div className="article-body">
         {articles.map((article) => (
-          <div className="article-content" key={article.id}>
+          <div
+            data-aos="fade-right"
+            className="article-content"
+            key={article.id}
+          >
             <img src={article.image} alt={article.text} />
             <h1>{article.title}</h1>
             <p>{article.text}</p>

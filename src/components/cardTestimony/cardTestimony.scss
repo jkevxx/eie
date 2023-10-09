@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+
 .testimony {
   display: flex;
   align-items: center;
@@ -11,6 +12,14 @@
   }
 
   div {
+    @include adapted-content-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 650px;
+    }
+
     img {
       width: 150px;
       height: 150px;
@@ -18,11 +27,26 @@
       position: relative;
       top: -30px;
       left: -20px;
+
+      @include adapted-content-mobile {
+        height: 280px;
+        max-width: 250px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        // object-position: top;
+      }
     }
 
     p {
       width: 400px;
       font-size: 24px;
+
+      @include adapted-content-mobile {
+        max-width: 250px;
+        width: 100%;
+        font-size: 18px;
+      }
     }
 
     .testimony-name {
@@ -37,6 +61,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+
+      @include adapted-content-mobile {
+        padding-top: 10px;
+        text-align: center;
+      }
     }
   }
 }

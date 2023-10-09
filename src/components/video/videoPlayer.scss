@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .video-player {
   text-align: center;
 
@@ -6,5 +8,10 @@
     width: 1500px;
     height: 700px;
     object-fit: cover;
+
+    @include adapted-content-mobile {
+      width: 400px;
+      height: 250px;
+    }
   }
 }

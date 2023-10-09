@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .talk {
   display: flex;
   position: relative;
@@ -7,6 +9,11 @@
     width: 420px;
     height: 420px;
     object-fit: cover;
+
+    @include adapted-content-mobile {
+      height: 250px;
+      width: 250px;
+    }
   }
 
   div {
@@ -19,9 +26,17 @@
     justify-content: center;
     align-items: center;
 
+    @include adapted-content-mobile {
+      height: 60px;
+    }
+
     h1 {
       font-size: 36px;
       text-align: center;
+
+      @include adapted-content-mobile {
+        font-size: 18px;
+      }
     }
   }
 }

@@ -11,6 +11,10 @@
   .title {
     h1 {
       font-size: 80px;
+
+      @include adapted-content-mobile {
+        font-size: 40px;
+      }
     }
   }
 
@@ -24,16 +28,35 @@
     height: 660px;
     width: 100%;
 
+    @include adapted-content-mobile {
+      // height: 550px;
+      // flex-direction: column;
+      // justify-content: space-between;
+    }
+
     .article-content {
       width: 300px;
       height: 100%;
       position: relative;
+
+      @include adapted-content-mobile {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        // gap: 10px;
+      }
 
       img {
         width: 100%;
         filter: brightness(0.6);
         height: 350px;
         object-fit: cover;
+
+        @include adapted-content-mobile {
+          height: 250px;
+        }
       }
 
       h1 {
@@ -42,6 +65,11 @@
         height: 90px;
         font-family: 'Inter-Bold', sans-serif;
         font-size: 22px;
+
+        @include adapted-content-mobile {
+          margin-top: 0;
+          height: auto;
+        }
       }
 
       p {
@@ -50,6 +78,10 @@
         height: 92px;
         text-overflow: ellipsis;
         overflow: hidden;
+
+        @include adapted-content-mobile {
+          height: auto;
+        }
       }
 
       .article-btn {
@@ -58,6 +90,10 @@
         position: absolute;
         bottom: 0;
         width: 100%;
+
+        @include adapted-content-mobile {
+          position: relative;
+        }
 
         .article-link {
           height: 38px;

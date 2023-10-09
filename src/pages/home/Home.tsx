@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Article from '../../components/article/Article';
@@ -24,9 +24,22 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Home = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <>
@@ -80,28 +93,56 @@ const Home = () => {
             </div>
 
             <div className="info">
-              <img data-aos="fade-right" src={groupPeople} alt="speakers" />
-              <div className="info-details">
-                <div data-aos="fade-up" className="dates">
-                  <h1>09 DE NOVIEMBRE</h1>
-                  <p>
-                    En EIE queremos inspirarte e impulsarte, junto a speakers
-                    nacionales e internacionales, a que des el siguiente paso
-                    para lograr tu Independencia Económica.
-                  </p>
-                </div>
-                <div data-aos="fade-up" className="more-info">
-                  <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
-                  <a
-                    href="https://eie-expo-tickets.blueberrytech.uk/tickets-sale"
-                    className="section-3-link"
-                    target="_blank"
-                    aria-label="compra de boletos link"
-                  >
-                    <span>Comprar Boletos</span>
-                  </a>
-                </div>
-              </div>
+              {isMobile ? (
+                <>
+                  <div data-aos="fade-up" className="dates">
+                    <h1>09 DE NOVIEMBRE</h1>
+                    <p>
+                      En EIE queremos inspirarte e impulsarte, junto a speakers
+                      nacionales e internacionales, a que des el siguiente paso
+                      para lograr tu Independencia Económica.
+                    </p>
+                  </div>
+                  <img data-aos="fade-right" src={groupPeople} alt="speakers" />
+                  <div data-aos="fade-up" className="more-info">
+                    <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
+                    <a
+                      href="https://eie-expo-tickets.blueberrytech.uk/tickets-sale"
+                      className="section-3-link"
+                      target="_blank"
+                      aria-label="compra de boletos link"
+                    >
+                      <span>Comprar Boletos</span>
+                    </a>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <img data-aos="fade-right" src={groupPeople} alt="speakers" />
+                  <div className="info-details">
+                    <div data-aos="fade-up" className="dates">
+                      <h1>09 DE NOVIEMBRE</h1>
+                      <p>
+                        En EIE queremos inspirarte e impulsarte, junto a
+                        speakers nacionales e internacionales, a que des el
+                        siguiente paso para lograr tu Independencia Económica.
+                      </p>
+                    </div>
+
+                    <div data-aos="fade-up" className="more-info">
+                      <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
+                      <a
+                        href="https://eie-expo-tickets.blueberrytech.uk/tickets-sale"
+                        className="section-3-link"
+                        target="_blank"
+                        aria-label="compra de boletos link"
+                      >
+                        <span>Comprar Boletos</span>
+                      </a>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>

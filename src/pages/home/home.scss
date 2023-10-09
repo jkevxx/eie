@@ -36,6 +36,10 @@
       @include adapted-content {
         font-size: 100px;
       }
+
+      @include adapted-content-mobile {
+        font-size: 50px;
+      }
     }
 
     h2 {
@@ -55,6 +59,10 @@
 
       @include adapted-content {
         font-size: 90px;
+      }
+
+      @include adapted-content-mobile {
+        font-size: 46px;
       }
     }
   }
@@ -81,19 +89,28 @@
     .section-2 {
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: flex-end;
-      flex-direction: column;
       position: relative;
       z-index: 5;
       padding-right: 120px;
       gap: 40px;
+
+      @include adapted-content-mobile {
+        padding-right: 0;
+        align-items: center;
+      }
 
       h1 {
         font-size: 140px;
         font-family: 'Inter-Regular', sans-serif;
         @include adapted-content {
           font-size: 100px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 50px;
         }
 
         span {
@@ -118,6 +135,13 @@
 
         @include adapted-content {
           font-size: 22px;
+        }
+
+        @include adapted-content-mobile {
+          width: 280px;
+          font-size: 18px;
+          line-height: 35px;
+          text-align: left;
         }
       }
 
@@ -145,6 +169,11 @@
           width: 250px;
         }
 
+        @include adapted-content-mobile {
+          height: 40px;
+          width: 150px;
+        }
+
         span {
           transform: skew(20deg);
           font-size: 25px;
@@ -152,6 +181,10 @@
 
           @include adapted-content {
             font-size: 20px;
+          }
+
+          @include adapted-content-mobile {
+            font-size: 15px;
           }
         }
       }
@@ -169,6 +202,10 @@
       $gradient-color-deep 100%
     );
 
+    @include adapted-content-mobile {
+      height: 1250px;
+    }
+
     .section-3-content {
       position: relative;
       z-index: 10;
@@ -176,9 +213,22 @@
       .title {
         padding: 50px 0px 20px 100px;
 
+        @include adapted-content-mobile {
+          padding: 50px 0px 20px 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
         h1 {
           font-size: 100px;
           margin-bottom: -40px;
+
+          @include adapted-content-mobile {
+            font-size: 35px;
+            margin-bottom: -12px;
+          }
         }
 
         p {
@@ -193,6 +243,11 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content-mobile {
+            font-size: 48px;
+            margin-bottom: -14px;
+          }
         }
       }
 
@@ -203,14 +258,28 @@
         height: 120px;
         margin-top: 20px;
 
+        @include adapted-content-mobile {
+          height: 60px;
+          margin-top: 10px;
+        }
+
         img {
           height: 80px;
           width: 200px;
+
+          @include adapted-content-mobile {
+            height: 40px;
+            width: 80px;
+          }
         }
 
         span {
           font-size: 60px;
           font-weight: bold;
+
+          @include adapted-content-mobile {
+            font-size: 20px;
+          }
         }
       }
 
@@ -221,12 +290,19 @@
         justify-content: space-evenly;
         align-items: center;
 
+        @include adapted-content-mobile {
+          flex-direction: column;
+          padding: 40px 10px;
+        }
+
         img {
           max-width: 900px;
           width: 100%;
-          // max-height: 700px;
-          // height: 100%;
-          // object-fit: cover;
+
+          @include adapted-content-mobile {
+            max-width: 500px;
+            margin-bottom: 40px;
+          }
         }
 
         .info-details {
@@ -294,6 +370,71 @@
             }
           }
         }
+
+        // info responsive for mobile
+        .dates {
+          @include adapted-content-mobile {
+            margin-bottom: 40px;
+          }
+
+          h1 {
+            @include adapted-content-mobile {
+              font-size: 30px;
+              text-align: center;
+            }
+          }
+
+          p {
+            @include adapted-content-mobile {
+              font-size: 20px;
+              // width: 500px;
+            }
+          }
+        }
+
+        .more-info {
+          @include adapted-content-mobile {
+            // margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
+          p {
+            @include adapted-content-mobile {
+              text-align: center;
+              font-size: 28px;
+              margin-bottom: 20px;
+              // width: 500px;
+            }
+          }
+
+          .section-3-link {
+            @include adapted-content-mobile {
+              height: 36px;
+              width: 160px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-family: 'Montserrat-Regular', sans-serif;
+              background: linear-gradient(
+                to top,
+                $gradient-color-deep-sec,
+                $gradient-color-soft-sec
+              );
+              transform: skew(-20deg);
+            }
+
+            span {
+              @include adapted-content-mobile {
+                transform: skew(20deg);
+                font-size: 14px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -311,6 +452,11 @@
       height: 3600px;
     }
 
+    @include adapted-content-mobile {
+      background-size: 500px auto;
+      height: 4100px;
+    }
+
     .gradient-overlay {
       position: absolute;
       width: 100%;
@@ -325,11 +471,21 @@
 
       .title {
         padding: 100px 0px 20px 100px;
+
+        @include adapted-content-mobile {
+          padding: 100px 0px 0px 0px;
+          text-align: center;
+        }
+
         h1 {
           font-size: 100px;
 
           @include adapted-content {
             font-size: 90px;
+          }
+
+          @include adapted-content-mobile {
+            font-size: 50px;
           }
         }
 
@@ -347,6 +503,12 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content-mobile {
+            padding-left: 0px;
+            font-size: 50px;
+            margin-top: -20px;
+          }
         }
       }
 
@@ -356,6 +518,11 @@
         align-items: center;
         margin-top: 100px;
         flex-wrap: wrap;
+        // gap: 60px;
+
+        @include adapted-content-mobile {
+          margin-top: 0px;
+        }
       }
     }
   }
@@ -366,6 +533,12 @@
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    @include adapted-content-mobile {
+      min-height: 70vh;
+      // background-position: -20px, top;
+      // height: 4100px;
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -383,13 +556,32 @@
       position: relative;
       z-index: 5;
 
+      @include adapted-content-mobile {
+        // height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
       .title {
         padding: 150px 0px 20px 100px;
+
+        @include adapted-content-mobile {
+          padding: 20px 0px 0px 0px;
+          text-align: center;
+        }
+
         h1 {
           font-size: 100px;
 
           @include adapted-content {
             font-size: 90px;
+          }
+
+          @include adapted-content-mobile {
+            font-size: 30px;
           }
         }
 
@@ -410,6 +602,11 @@
           @include adapted-content {
             font-size: 100px;
           }
+
+          @include adapted-content-mobile {
+            font-size: 36px;
+            margin-top: -10px;
+          }
         }
       }
 
@@ -423,9 +620,21 @@
         margin-right: 7%;
         margin-top: 160px;
 
+        @include adapted-content-mobile {
+          margin-top: 0;
+          margin-right: 0;
+          align-items: center;
+        }
+
         p {
           width: 580px;
           font-size: 36px;
+
+          @include adapted-content-mobile {
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+          }
         }
 
         .section-5-link {
@@ -446,6 +655,11 @@
 
           &:hover {
             opacity: 0.9;
+          }
+
+          @include adapted-content-mobile {
+            height: 38px;
+            width: 180px;
           }
 
           span {
@@ -470,6 +684,10 @@
       rgba(37, 54, 76, 1) 75%
     );
 
+    @include adapted-content-mobile {
+      height: 1200px;
+    }
+
     .section-6-content {
       position: relative;
       z-index: 10;
@@ -480,11 +698,22 @@
 
       .title {
         padding: 100px 0px 50px 100px;
+
+        @include adapted-content-mobile {
+          padding: 100px 0px 0px 0px;
+        }
+
         h1 {
           font-size: 100px;
 
           @include adapted-content {
             font-size: 90px;
+          }
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+            text-align: center;
+            line-height: 38px;
           }
 
           span {
@@ -502,6 +731,11 @@
             @include adapted-content {
               font-size: 100px;
             }
+
+            @include adapted-content-mobile {
+              font-size: 40px;
+              text-align: center;
+            }
           }
         }
 
@@ -509,14 +743,19 @@
           padding: 30px;
           text-align: center;
           font-size: 29px;
+
+          @include adapted-content-mobile {
+            font-size: 20px;
+          }
         }
       }
 
       .cards {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        flex-wrap: wrap;
         gap: 20px;
       }
     }
@@ -532,5 +771,9 @@
       rgba(7, 11, 15, 1) 20%,
       rgba(37, 54, 76, 1) 75%
     );
+
+    @include adapted-content-mobile {
+      height: 2400px;
+    }
   }
 }

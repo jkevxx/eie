@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import blueberry from '../../assets/images/blueberry.gif';
 import eieLogo from '../../assets/svg/eie-logo.svg';
@@ -14,9 +14,21 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Footer = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <>
@@ -26,45 +38,89 @@ const Footer = () => {
         </video>
 
         <div className="gradient-overlay"></div>
+
         <div className="footer-container">
           <div className="container-section-1">
-            <div data-aos="fade-up" className="social-networks">
-              <p>Síguenos en nuestras redes sociales</p>
-              <div className="social-icons">
-                <a
-                  href="https://www.instagram.com/eie.mx/"
-                  target="_blank"
-                  aria-label="Instagram link"
-                >
-                  <img src={instaIcon} alt="instagram icon" />
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100083817837197"
-                  target="_blank"
-                  aria-label="Facebook link"
-                >
-                  <img src={faceIcon} alt="facebook icon" />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@eie.mx"
-                  target="_blank"
-                  aria-label="Tiktok link"
-                >
-                  <img src={tiktokIcon} alt="tiktok icon" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
-                  target="_blank"
-                  aria-label="linkedin link"
-                >
-                  <img src={linkedinIcon} alt="linkedin icon" />
-                </a>
-              </div>
-            </div>
+            {isMobile ? (
+              <>
+                <div data-aos="fade-up" className="eie-logo">
+                  <img src={eieLogo} alt="EIE logo" />
+                </div>
+                <div data-aos="fade-up" className="social-networks">
+                  <p>Síguenos en nuestras redes sociales</p>
+                </div>
+                <div data-aos="fade-up" className="social-icons">
+                  <a
+                    href="https://www.instagram.com/eie.mx/"
+                    target="_blank"
+                    aria-label="Instagram link"
+                  >
+                    <img src={instaIcon} alt="instagram icon" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100083817837197"
+                    target="_blank"
+                    aria-label="Facebook link"
+                  >
+                    <img src={faceIcon} alt="facebook icon" />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@eie.mx"
+                    target="_blank"
+                    aria-label="Tiktok link"
+                  >
+                    <img src={tiktokIcon} alt="tiktok icon" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
+                    target="_blank"
+                    aria-label="linkedin link"
+                  >
+                    <img src={linkedinIcon} alt="linkedin icon" />
+                  </a>
+                </div>
+              </>
+            ) : (
+              <>
+                <div data-aos="fade-up" className="social-networks">
+                  <p>Síguenos en nuestras redes sociales</p>
+                  <div className="social-icons">
+                    <a
+                      href="https://www.instagram.com/eie.mx/"
+                      target="_blank"
+                      aria-label="Instagram link"
+                    >
+                      <img src={instaIcon} alt="instagram icon" />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100083817837197"
+                      target="_blank"
+                      aria-label="Facebook link"
+                    >
+                      <img src={faceIcon} alt="facebook icon" />
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@eie.mx"
+                      target="_blank"
+                      aria-label="Tiktok link"
+                    >
+                      <img src={tiktokIcon} alt="tiktok icon" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
+                      target="_blank"
+                      aria-label="linkedin link"
+                    >
+                      <img src={linkedinIcon} alt="linkedin icon" />
+                    </a>
+                  </div>
+                </div>
 
-            <div data-aos="fade-up" className="eie-logo">
-              <img src={eieLogo} alt="EIE logo" />
-            </div>
+                <div data-aos="fade-up" className="eie-logo">
+                  <img src={eieLogo} alt="EIE logo" />
+                </div>
+              </>
+            )}
           </div>
 
           <div data-aos="fade-down" className="container-section-2">
@@ -76,6 +132,7 @@ const Footer = () => {
               <Link to="/blog">Blog</Link>
               <Link to="/contacto">Contacto</Link>
             </div>
+
             <div className="section-2-info">
               <h1>¿QUIERES SABER MÁS?</h1>
               <div className="contact">
@@ -87,13 +144,35 @@ const Footer = () => {
                   <p>hola@eie.mx</p>
                 </div>
               </div>
-              <div className="privacity-section">
+
+              {isMobile ? (
+                <></>
+              ) : (
+                <>
+                  <div className="privacy-section">
+                    <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link>
+                    <Link to="/cookies">Cookies</Link>
+                    <Link to="/terminos-y-condiciones">
+                      Términos y Condiciones
+                    </Link>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          {isMobile ? (
+            <>
+              <div data-aos="fade-down" className="line-divider"></div>
+              <div data-aos="fade-down" className="privacy-section">
                 <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link>
                 <Link to="/cookies">Cookies</Link>
                 <Link to="/terminos-y-condiciones">Términos y Condiciones</Link>
               </div>
-            </div>
-          </div>
+            </>
+          ) : (
+            <></>
+          )}
 
           <div data-aos="fade-down" className="container-section-3">
             <p>

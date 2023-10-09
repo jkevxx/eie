@@ -13,6 +13,10 @@
     // max-height: 800px;
     // height: 100%;
     // user-select: none;
+
+    @include adapted-content-mobile {
+      max-width: 380px;
+    }
   }
 
   .sponsor {
@@ -28,7 +32,6 @@
       width: 80%;
       // max-height: 400px;
       // height: 100%;
-      // aspect-ratio: 16/9;
       // object-fit: contain;
     }
 
@@ -38,11 +41,20 @@
       text-align: center;
       top: 10%;
 
+      @include adapted-content-mobile {
+        top: 0;
+        position: relative;
+      }
+
       h1 {
         font-size: 90px;
 
         @include adapted-content {
-          font-size: 80px;
+          font-size: 60px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 38px;
         }
       }
 
@@ -61,7 +73,12 @@
         background-clip: text;
 
         @include adapted-content {
-          font-size: 80px;
+          font-size: 60px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 34px;
+          margin-top: -10px;
         }
       }
     }
@@ -82,6 +99,13 @@
 
     @include adapted-content {
       font-size: 80px;
+    }
+
+    @include adapted-content-mobile {
+      font-size: 40px;
+      // margin-top: -10px;
+      line-height: 38px;
+      text-align: center;
     }
   }
 }
