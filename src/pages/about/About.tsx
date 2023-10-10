@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BlogForm from '../../components/blog/BlogForm';
 import Footer from '../../components/footer/Footer';
 import Gallery from '../../components/gallery/Gallery';
@@ -11,11 +11,25 @@ import './about.scss';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Slider from '../../components/slider/Slider';
 
 const About = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <>
@@ -92,12 +106,24 @@ const About = () => {
         </section>
 
         <section className="section section-5">
-          <div className="section-5-content">
-            <div className="gallery">
-              {galleryAbout.map((event) => (
-                <Gallery image={event.image} name={event.name} key={event.id} />
-              ))}
-            </div>
+          <div data-aos="fade-down" className="section-5-content">
+            {isMobile ? (
+              <>
+                <Slider />
+              </>
+            ) : (
+              <>
+                <div className="gallery">
+                  {galleryAbout.map((event) => (
+                    <Gallery
+                      image={event.image}
+                      name={event.name}
+                      key={event.id}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </section>
 

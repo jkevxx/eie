@@ -44,9 +44,7 @@ const BlogForm = () => {
       <div className="bg-image-blog"></div>
       <div className="gradient-overlay"></div>
       <div className="blog-container">
-        {isMobile ? (
-          <></>
-        ) : (
+        {!isMobile && (
           <>
             <div data-aos="fade-left" className="blog-image">
               <img src={blogImage} alt={blogImage} />

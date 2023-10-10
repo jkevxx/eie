@@ -145,9 +145,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              {isMobile ? (
-                <></>
-              ) : (
+              {!isMobile && (
                 <>
                   <div className="privacy-section">
                     <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link>

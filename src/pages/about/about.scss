@@ -36,6 +36,10 @@
       user-select: none;
       width: 100%;
       font-family: 'Inter-Bold', sans-serif;
+
+      @include adapted-content-mobile {
+        font-size: 26px;
+      }
     }
 
     h2 {
@@ -47,6 +51,10 @@
 
       @include adapted-content {
         font-size: 120px;
+      }
+
+      @include adapted-content-mobile {
+        font-size: 36px;
       }
     }
 
@@ -64,8 +72,14 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+
       @include adapted-content {
         font-size: 140px;
+      }
+
+      @include adapted-content-mobile {
+        margin-top: -5px;
+        font-size: 46px;
       }
     }
   }
@@ -97,10 +111,22 @@
       align-items: flex-end;
       gap: 40px;
 
+      @include adapted-content-mobile {
+        width: 100%;
+        align-items: center;
+      }
+
       h1 {
         font-size: 110px;
+
         @include adapted-content {
           font-size: 100px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 46px;
+          text-align: center;
+          line-height: 42px;
         }
 
         span {
@@ -120,6 +146,10 @@
           @include adapted-content {
             font-size: 110px;
           }
+
+          @include adapted-content-mobile {
+            font-size: 50px;
+          }
         }
       }
 
@@ -128,6 +158,13 @@
         font-size: 24px;
         text-align: right;
         line-height: 30px;
+
+        @include adapted-content-mobile {
+          width: 290px;
+          font-size: 20px;
+          line-height: 30px;
+          text-align: left;
+        }
       }
     }
   }
@@ -139,6 +176,10 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include adapted-content-mobile {
+      height: 2400px;
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -160,11 +201,26 @@
       flex-direction: column;
       justify-content: space-around;
 
+      @include adapted-content-mobile {
+        align-items: center;
+      }
+
       .mision {
-        padding: 00px 0px 0px 100px;
+        padding: 0px 0px 0px 100px;
+
+        @include adapted-content-mobile {
+          padding: 0;
+        }
+
         h1 {
           font-size: 110px;
           font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
         }
 
         p {
@@ -172,6 +228,12 @@
           font-size: 28px;
           text-align: left;
           line-height: 40px;
+
+          @include adapted-content-mobile {
+            width: 290px;
+            font-size: 20px;
+            line-height: 30px;
+          }
         }
       }
 
@@ -183,9 +245,20 @@
         justify-content: center;
         align-items: flex-end;
 
+        @include adapted-content-mobile {
+          align-items: center;
+          padding: 0;
+        }
+
         h1 {
           font-size: 110px;
           font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
         }
 
         p {
@@ -193,6 +266,13 @@
           font-size: 30px;
           text-align: right;
           line-height: 40px;
+
+          @include adapted-content-mobile {
+            width: 290px;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: left;
+          }
         }
       }
 
@@ -208,6 +288,12 @@
         h1 {
           font-size: 110px;
           font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
         }
 
         p {
@@ -216,6 +302,13 @@
           text-align: center;
           margin-top: -40px;
           line-height: 40px;
+
+          @include adapted-content-mobile {
+            width: 290px;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: left;
+          }
         }
       }
     }
@@ -252,6 +345,11 @@
 
       h1 {
         font-size: 80px;
+
+        @include adapted-content-mobile {
+          font-size: 30px;
+          text-align: center;
+        }
       }
 
       h2 {
@@ -266,6 +364,12 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+
+        @include adapted-content-mobile {
+          font-size: 32px;
+          margin-top: -5px;
+          line-height: 42px;
+        }
       }
     }
   }
@@ -275,9 +379,21 @@
     width: 100%;
     background-color: #06090d;
 
+    @include adapted-content-mobile {
+      min-height: 80vh;
+    }
+
     .section-5-content {
       position: relative;
       z-index: 10;
+
+      @include adapted-content-mobile {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
       .gallery {
         width: 100%;

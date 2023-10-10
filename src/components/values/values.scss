@@ -6,6 +6,11 @@
   align-items: center;
   gap: 30px;
 
+  @include adapted-content-mobile {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
   div {
     width: 160px;
     height: 320px;

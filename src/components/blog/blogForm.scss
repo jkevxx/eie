@@ -38,8 +38,6 @@
     justify-content: space-around;
 
     .blog-image {
-      // width: 800px;
-      // max-height: 800px;
       height: 90vh;
 
       img {
@@ -98,12 +96,12 @@
 
           @include adapted-content {
             font-size: 100px;
-            line-height: 60px;
           }
 
           @include adapted-content-mobile {
             font-size: 44px;
             text-align: center;
+            line-height: 80px;
           }
         }
       }

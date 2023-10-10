@@ -1,0 +1,36 @@
+.gallery-carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container-images {
+    position: relative;
+
+    .image {
+      // max-width: 350px;
+      width: 340px;
+      height: 380px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .leftArrow {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      cursor: pointer;
+
+      user-select: none;
+    }
+
+    .rightArrow {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      cursor: pointer;
+
+      user-select: none;
+    }
+  }
+}
