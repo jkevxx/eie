@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Input from 'react-phone-number-input/input';
 import './form.scss';
 
 // importing aos
@@ -13,19 +12,20 @@ type Props = {
 type Form = {
   name: string;
   email: string;
-  phone: string;
+  phoneNumber: string;
   message: string;
 };
 
 const initialFormState: Form = {
   name: '',
   email: '',
-  phone: '',
+  phoneNumber: '',
   message: '',
 };
 
 const Form = ({ title }: Props) => {
   const [form, setForm] = useState<Form>(initialFormState);
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,8 +36,14 @@ const Form = ({ title }: Props) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleChangePhone = (value: string) => {
-    setForm({ ...form, phone: value });
+  const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value;
+    const numericInput = input.replace(/\D/g, '');
+    const formattedPhoneNumber = numericInput.replace(/(\d{2})(?=\d)/g, '$1 ');
+
+    setPhoneNumber(formattedPhoneNumber);
+
+    setForm({ ...form, phoneNumber: formattedPhoneNumber.split(' ').join('') });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,6 +51,7 @@ const Form = ({ title }: Props) => {
     console.log(form);
     // axios.put(`/api/`, form);
     setForm(initialFormState);
+    setPhoneNumber('');
   };
 
   useEffect(() => {
@@ -97,17 +104,16 @@ const Form = ({ title }: Props) => {
         </div>
 
         <div>
-          <label htmlFor="phone">Teléfono</label>
-          <Input
-            name="phone"
-            id="phone"
-            defaultCountry="MX"
+          <label htmlFor="phoneNumber">Teléfono</label>
+          <input
+            name="phoneNumber"
+            id="phoneNumber"
+            type="text"
+            maxLength={14}
             className={title === 'contacto' ? 'contacto' : 'formulario'}
-            maxLength={12}
-            pattern=".{12,12}"
-            value={form.phone || ''}
+            value={phoneNumber || ''}
             required
-            onChange={handleChangePhone}
+            onChange={handlePhoneNumberChange}
           />
         </div>
 
