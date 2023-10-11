@@ -1,5 +1,24 @@
 @import '../../styles/variables.scss';
 
+@mixin linesRules {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  // background-size: ;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+@mixin speakerPhone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  // height: 250px;
+  gap: 60px;
+}
+
 .events {
   position: relative;
 
@@ -34,6 +53,11 @@
       @include adapted-content {
         font-size: 110px;
       }
+
+      @include adapted-content-mobile {
+        font-size: 50px;
+        width: 100%;
+      }
     }
 
     h2 {
@@ -54,6 +78,11 @@
 
       @include adapted-content {
         font-size: 120px;
+      }
+
+      @include adapted-content-mobile {
+        font-size: 52px;
+        width: 100%;
       }
     }
   }
@@ -88,11 +117,20 @@
       position: relative;
       z-index: 5;
 
+      @include adapted-content-mobile {
+        align-items: center;
+        margin-left: 0;
+      }
+
       h1 {
         font-size: 140px;
 
         @include adapted-content {
           font-size: 110px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 52px;
         }
       }
 
@@ -113,6 +151,11 @@
         @include adapted-content {
           font-size: 120px;
         }
+
+        @include adapted-content-mobile {
+          font-size: 52px;
+          margin-top: -10px;
+        }
       }
 
       p {
@@ -120,6 +163,13 @@
         font-size: 26px;
         line-height: 40px;
         text-align: left;
+
+        @include adapted-content-mobile {
+          width: 280px;
+          font-size: 22px;
+          line-height: 32px;
+          text-align: left;
+        }
       }
     }
   }
@@ -132,6 +182,10 @@
     background-position: top 0px left 0px;
     background-repeat: no-repeat;
     background-color: #000;
+
+    @include adapted-content-mobile {
+      min-height: 80vh;
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -155,11 +209,21 @@
       position: relative;
       z-index: 5;
 
+      @include adapted-content-mobile {
+        align-items: center;
+        margin-right: 0;
+        height: 80vh;
+      }
+
       h1 {
         font-size: 140px;
 
         @include adapted-content {
           font-size: 120px;
+        }
+
+        @include adapted-content-mobile {
+          font-size: 52px;
         }
       }
 
@@ -180,6 +244,11 @@
         @include adapted-content {
           font-size: 120px;
         }
+
+        @include adapted-content-mobile {
+          font-size: 52px;
+          margin-top: -14px;
+        }
       }
 
       p {
@@ -187,6 +256,14 @@
         font-size: 26px;
         line-height: 40px;
         text-align: right;
+
+        @include adapted-content-mobile {
+          width: 280px;
+          font-size: 22px;
+          line-height: 32px;
+          text-align: left;
+          margin-top: 40px;
+        }
       }
     }
   }
@@ -199,6 +276,11 @@
     background-position: top;
     background-repeat: no-repeat;
     background-color: #06090d;
+
+    @include adapted-content-mobile {
+      height: 1400px;
+      background-size: 800px auto;
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -222,6 +304,13 @@
         columns: 3;
         margin-top: 120px;
         max-width: 1200px;
+
+        @include adapted-content-mobile {
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
@@ -232,6 +321,10 @@
     height: 1250px;
     background-color: #06090d;
 
+    @include adapted-content-mobile {
+      height: 2150px;
+    }
+
     .section-5-content {
       position: relative;
       z-index: 10;
@@ -240,9 +333,20 @@
         padding: 50px 0px 0px 100px;
         width: 850px;
 
+        @include adapted-content-mobile {
+          padding: 50px 0px 0px 0px;
+          width: 100%;
+        }
+
         h1 {
           font-size: 100px;
+
+          @include adapted-content-mobile {
+            font-size: 58px;
+            text-align: center;
+          }
         }
+
         h2 {
           font-size: 120px;
           margin-top: -40px;
@@ -256,6 +360,12 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content-mobile {
+            font-size: 78px;
+            text-align: center;
+            margin-top: -16px;
+          }
         }
       }
     }
@@ -269,6 +379,9 @@
     background-position: top;
     background-repeat: no-repeat;
     background-color: #000;
+
+    @include adapted-content-mobile {
+    }
 
     .gradient-overlay {
       position: absolute;
@@ -288,6 +401,14 @@
       align-items: center;
 
       .title {
+        @include adapted-content-mobile {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
         h1 {
           max-width: 950px;
           width: 100%;
@@ -298,6 +419,10 @@
           @include adapted-content {
             font-size: 60px;
           }
+
+          @include adapted-content-mobile {
+            font-size: 28px;
+          }
         }
 
         p {
@@ -306,6 +431,12 @@
           text-align: center;
           font-size: 26px;
           margin-top: 20px;
+
+          @include adapted-content-mobile {
+            width: 330px;
+            font-size: 22px;
+            text-align: center;
+          }
         }
       }
 
@@ -315,6 +446,11 @@
 
         @include adapted-content {
           max-width: 750px;
+        }
+
+        @include adapted-content-mobile {
+          max-width: 280px;
+          width: 100%;
         }
       }
     }
@@ -326,22 +462,47 @@
     height: 3100px;
     background-color: #06090d;
 
+    @include adapted-content-mobile {
+      height: 8400px;
+    }
+
+    .section-7-left-line {
+      @include linesRules;
+      background-image: url('../../assets/svg/left-lines.svg');
+    }
+
+    .section-7-right-line {
+      @include linesRules;
+      background-image: url('../../assets/svg/right-lines.svg');
+      right: 0;
+    }
+
     .section-7-content {
       position: relative;
       z-index: 10;
 
       .title {
         padding: 100px 0px 0px 100px;
+
+        @include adapted-content-mobile {
+          padding: 50px 0px 0px 0px;
+          width: 100%;
+        }
+
         h1 {
           font-size: 100px;
           line-height: 90%;
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+            text-align: center;
+          }
         }
 
         h2 {
           font-size: 120px;
           margin-top: -20px;
           margin-left: 200px;
-          // text-align: right;
           font-family: 'AkzidenzGroteskBQ-XBold', sans-serif;
           background: linear-gradient(
             to bottom,
@@ -351,6 +512,13 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content-mobile {
+            font-size: 68px;
+            margin-top: -10px;
+            margin-left: 0px;
+            text-align: center;
+          }
         }
       }
 
@@ -365,6 +533,10 @@
 
           h2 {
             font-size: 60px;
+
+            @include adapted-content-mobile {
+              font-size: 28px;
+            }
           }
         }
 
@@ -377,6 +549,10 @@
             display: grid;
             grid-template-columns: repeat(4, 280px);
             grid-gap: 30px;
+          }
+
+          .speaker-phone {
+            @include speakerPhone;
           }
         }
 
@@ -395,6 +571,15 @@
             grid-gap: 28px;
             justify-content: center;
           }
+
+          .speaker-phone {
+            @include speakerPhone;
+          }
+
+          .speaker-phone-section-2 {
+            @include speakerPhone;
+            margin-top: 60px;
+          }
         }
 
         .speaker-3 {
@@ -405,6 +590,10 @@
             display: grid;
             grid-template-columns: repeat(5, 250px);
             grid-gap: 2px;
+          }
+
+          .speaker-phone {
+            @include speakerPhone;
           }
         }
       }

@@ -64,37 +64,37 @@ export const galleryEvents = [
   {
     id: "1",
     image: "./src/assets/images/gallery/event-gallery-1.png",
-    name: "Fotografía de la edición 1",
+    name: "Fotografía de edición 2",
   },
   {
     id: "2",
     image: "./src/assets/images/gallery/event-gallery-2.png",
-    name: "Fotografía de la edición 2",
+    name: "Fotografía de edición 2",
   },
   {
     id: "3",
     image: "./src/assets/images/gallery/event-gallery-3.png",
-    name: "Fotografía de la edición 3",
+    name: "Fotografía de edición 2",
   },
   {
     id: "4",
     image: "./src/assets/images/gallery/event-gallery-4.png",
-    name: "Fotografía de la edición 4",
+    name: "Fotografía de edición 2",
   },
   {
     id: "5",
     image: "./src/assets/images/gallery/event-gallery-5.png",
-    name: "Fotografía de la edición 5",
+    name: "Fotografía de edición 2",
   },
   {
     id: "6",
     image: "./src/assets/images/gallery/event-gallery-6.png",
-    name: "Fotografía de la edición 6",
+    name: "Fotografía de edición 2",
   },
   {
     id: "7",
     image: "./src/assets/images/gallery/event-gallery-7.png",
-    name: "Fotografía de la edición 7",
+    name: "Fotografía de edición 2",
   }
 ]
 
@@ -102,37 +102,37 @@ export const galleryAbout = [
   {
     id: "1",
     image: "./src/assets/images/gallery/about-gallery-1.png",
-    name: "Fotografía de la edición 1",
+    name: "Fotografía de edición 1",
   },
   {
     id: "2",
     image: "./src/assets/images/gallery/about-gallery-2.png",
-    name: "Fotografía de la edición 2",
+    name: "Fotografía de edición 1",
   },
   {
     id: "3",
     image: "./src/assets/images/gallery/about-gallery-3.png",
-    name: "Fotografía de la edición 3",
+    name: "Fotografía de edición 1",
   },
   {
     id: "4",
     image: "./src/assets/images/gallery/about-gallery-4.png",
-    name: "Fotografía de la edición 4",
+    name: "Fotografía de edición 1",
   },
   {
     id: "5",
     image: "./src/assets/images/gallery/about-gallery-5.png",
-    name: "Fotografía de la edición 5",
+    name: "Fotografía de edición 1",
   },
   {
     id: "6",
     image: "./src/assets/images/gallery/about-gallery-6.png",
-    name: "Fotografía de la edición 6",
+    name: "Fotografía de edición 1",
   },
   {
     id: "7",
     image: "./src/assets/images/gallery/about-gallery-7.png",
-    name: "Fotografía de la edición 7",
+    name: "Fotografía de edición 1",
   }
 ]
 
@@ -191,7 +191,7 @@ export const speakers3 = [
     id: 3,
     name: "Marco Antonio Regil",
     image: "./src/assets/images/speakers/marco-antonio-regil.webp",
-    description: "Exitoso animador de TV con 37 años de trayectoria. Reconocido por la revista “Selecciones de Readers Digers” como el presentador más confiable de México.Conferencista y experto en desarrollo personal que ha ayudado a millones de personas en EEUU, México y toda América Latina."
+    description: "Exitoso animador de TV con 37 años de trayectoria. Conferencista y experto en desarrollo personal que ha ayudado a millones de personas en EEUU, México y toda América Latina."
   },
   {
     id: 4,

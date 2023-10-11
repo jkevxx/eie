@@ -108,21 +108,17 @@ const About = () => {
         <section className="section section-5">
           <div data-aos="fade-down" className="section-5-content">
             {isMobile ? (
-              <>
-                <Slider />
-              </>
+              <Slider gallery={galleryAbout} />
             ) : (
-              <>
-                <div className="gallery">
-                  {galleryAbout.map((event) => (
-                    <Gallery
-                      image={event.image}
-                      name={event.name}
-                      key={event.id}
-                    />
-                  ))}
-                </div>
-              </>
+              <div className="gallery">
+                {galleryAbout.map((event) => (
+                  <Gallery
+                    image={event.image}
+                    name={event.name}
+                    key={event.id}
+                  />
+                ))}
+              </div>
             )}
           </div>
         </section>

@@ -105,6 +105,7 @@
       h1 {
         font-size: 140px;
         font-family: 'Inter-Regular', sans-serif;
+
         @include adapted-content {
           font-size: 100px;
         }

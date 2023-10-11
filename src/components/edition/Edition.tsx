@@ -10,8 +10,10 @@ import './edition.scss';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Slider from '../slider/Slider';
 
 const Edition = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [selectedTab, setSelectedTab] = useState('tab1');
 
   const handleTabClick = (tab: string) => {
@@ -21,6 +23,17 @@ const Edition = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <div className="edition">
@@ -52,18 +65,30 @@ const Edition = () => {
 
       <div className="gallery">
         {selectedTab === 'tab1' &&
-          galleryAbout.map((image) => (
-            <Gallery image={image.image} name={image.name} key={image.id} />
+          (isMobile ? (
+            <Slider gallery={galleryAbout} />
+          ) : (
+            galleryAbout.map((image) => (
+              <Gallery image={image.image} name={image.name} key={image.id} />
+            ))
           ))}
 
         {selectedTab === 'tab2' &&
-          galleryEvents.map((event) => (
-            <Gallery image={event.image} name={event.name} key={event.id} />
+          (isMobile ? (
+            <Slider gallery={galleryEvents} />
+          ) : (
+            galleryEvents.map((event) => (
+              <Gallery image={event.image} name={event.name} key={event.id} />
+            ))
           ))}
 
         {selectedTab === 'tab3' &&
-          galleryAbout.map((image) => (
-            <Gallery image={image.image} name={image.name} key={image.id} />
+          (isMobile ? (
+            <Slider gallery={galleryAbout} />
+          ) : (
+            galleryAbout.map((image) => (
+              <Gallery image={image.image} name={image.name} key={image.id} />
+            ))
           ))}
       </div>
     </div>

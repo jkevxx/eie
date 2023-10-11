@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BlogForm from '../../components/blog/BlogForm';
 import Edition from '../../components/edition/Edition';
 import Footer from '../../components/footer/Footer';
@@ -8,6 +8,7 @@ import Menu from '../../components/menu/Menu';
 import Speaker from '../../components/speaker/Speaker';
 import Ticket from '../../components/ticket/Ticket';
 
+import aimedPeopleResponsive from '../../assets/images/events/aimed-at-events-responsive-phone.webp';
 import aimedPeople from '../../assets/images/events/aimed-at-events.webp';
 import eventVideo from '../../assets/video/video-eventos.mp4';
 import { speakers1, speakers2, speakers2Section2, speakers3 } from '../../data';
@@ -18,9 +19,22 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Events = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <>
@@ -92,12 +106,32 @@ const Events = () => {
                 lograr su independencia económica!
               </p>
             </div>
-            <img data-aos="fade-up" src={aimedPeople} alt="speakers" />
+            {isMobile ? (
+              <>
+                <img
+                  data-aos="fade-up"
+                  src={aimedPeopleResponsive}
+                  alt="speakers"
+                />
+              </>
+            ) : (
+              <>
+                <img data-aos="fade-up" src={aimedPeople} alt="speakers" />
+              </>
+            )}
           </div>
         </section>
 
         <section className="section section-7">
-          <Lines />
+          {isMobile ? (
+            <>
+              <div className="section-7-left-line"></div>
+              <div className="section-7-right-line"></div>
+            </>
+          ) : (
+            <Lines />
+          )}
+
           <div className="section-7-content">
             <div className="title">
               <h1 data-aos="fade-up">NUESTROS</h1>
@@ -106,55 +140,113 @@ const Events = () => {
             <div className="speakers">
               <div className="speaker-1">
                 <h2 data-aos="fade-down">3RA EDICIÓN</h2>
-                <div className="speaker">
-                  {speakers3.map((speaker) => (
-                    <Speaker
-                      image={speaker.image}
-                      name={speaker.name}
-                      description={speaker.description}
-                      key={speaker.id}
-                    />
-                  ))}
-                </div>
+                {isMobile ? (
+                  <div className="speaker-phone">
+                    {speakers3.map((speaker) => (
+                      <Speaker
+                        image={speaker.image}
+                        name={speaker.name}
+                        description={speaker.description}
+                        key={speaker.id}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="speaker">
+                    {speakers3.map((speaker) => (
+                      <Speaker
+                        image={speaker.image}
+                        name={speaker.name}
+                        description={speaker.description}
+                        key={speaker.id}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="speaker-2">
                 <h2 data-aos="fade-down">2DA EDICIÓN</h2>
-                <div className="speaker">
-                  {speakers2.map((speaker) => (
-                    <Speaker
-                      image={speaker.image}
-                      name={speaker.name}
-                      description={speaker.description}
-                      key={speaker.id}
-                    />
-                  ))}
-                </div>
+                {isMobile ? (
+                  <>
+                    <div className="speaker-phone">
+                      {speakers2.map((speaker) => (
+                        <Speaker
+                          image={speaker.image}
+                          name={speaker.name}
+                          description={speaker.description}
+                          key={speaker.id}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="speaker">
+                    {speakers2.map((speaker) => (
+                      <Speaker
+                        image={speaker.image}
+                        name={speaker.name}
+                        description={speaker.description}
+                        key={speaker.id}
+                      />
+                    ))}
+                  </div>
+                )}
 
-                <div className="speaker-section-2">
-                  {speakers2Section2.map((speaker) => (
-                    <Speaker
-                      image={speaker.image}
-                      name={speaker.name}
-                      description={speaker.description}
-                      key={speaker.id}
-                    />
-                  ))}
-                </div>
+                {isMobile ? (
+                  <>
+                    <div className="speaker-phone-section-2">
+                      {speakers2Section2.map((speaker) => (
+                        <Speaker
+                          image={speaker.image}
+                          name={speaker.name}
+                          description={speaker.description}
+                          key={speaker.id}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="speaker-section-2">
+                    {speakers2Section2.map((speaker) => (
+                      <Speaker
+                        image={speaker.image}
+                        name={speaker.name}
+                        description={speaker.description}
+                        key={speaker.id}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="speaker-3">
                 <h2 data-aos="fade-down">1RA EDICIÓN</h2>
-                <div className="speaker">
-                  {speakers1.map((speaker) => (
-                    <Speaker
-                      image={speaker.image}
-                      name={speaker.name}
-                      description={speaker.description}
-                      key={speaker.id}
-                    />
-                  ))}
-                </div>
+                {isMobile ? (
+                  <>
+                    <div className="speaker-phone">
+                      {speakers1.map((speaker) => (
+                        <Speaker
+                          image={speaker.image}
+                          name={speaker.name}
+                          description={speaker.description}
+                          key={speaker.id}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="speaker">
+                    {speakers1.map((speaker) => (
+                      <Speaker
+                        image={speaker.image}
+                        name={speaker.name}
+                        description={speaker.description}
+                        key={speaker.id}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
