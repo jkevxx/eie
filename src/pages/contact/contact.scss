@@ -35,6 +35,12 @@
       text-align: center;
       line-height: 90%;
       user-select: none;
+
+      @include adapted-content-mobile {
+        font-size: 46px;
+        text-align: center;
+        line-height: 38px;
+      }
     }
 
     h2 {
@@ -51,6 +57,11 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
 
+      @include adapted-content-mobile {
+        font-size: 52px;
+        text-align: center;
+      }
+
       span {
         font-size: 160px;
         font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
@@ -58,6 +69,11 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+
+        @include adapted-content-mobile {
+          font-size: 46px;
+          margin-left: -10px;
+        }
       }
     }
   }
@@ -65,7 +81,7 @@
   .section-2 {
     position: relative;
     width: 100%;
-    background: rgb(7, 11, 15);
+    // background: rgb(7, 11, 15);
     background: linear-gradient(
       90deg,
       rgba(7, 11, 15, 1) 20%,
@@ -80,9 +96,20 @@
       justify-content: space-evenly;
       align-items: center;
 
+      @include adapted-content-mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
+
       img {
         max-width: 650px;
         width: 100%;
+
+        @include adapted-content-mobile {
+          width: 200px;
+          position: relative;
+          top: 20px;
+        }
       }
     }
   }

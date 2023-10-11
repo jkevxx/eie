@@ -26,6 +26,7 @@ const initialFormState: Form = {
 
 const Form = ({ title }: Props) => {
   const [form, setForm] = useState<Form>(initialFormState);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -50,9 +51,24 @@ const Form = ({ title }: Props) => {
     AOS.init();
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
+
   return (
     <div className="form">
-      <h1 data-aos="fade-down">{title}</h1>
+      {isMobile && title === 'contacto' ? (
+        <></>
+      ) : (
+        <h1 data-aos="fade-down">{title}</h1>
+      )}
       <form data-aos="fade-right" onSubmit={handleSubmit} autoComplete={'off'}>
         <div>
           <label htmlFor="name">Nombre</label>

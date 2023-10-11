@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import contactImage from '../../assets/images/sergio-y-marco.webp';
 import BlogForm from '../../components/blog/BlogForm';
 import Footer from '../../components/footer/Footer';
@@ -13,6 +13,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Contact = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     AOS.init();
     const hash = window.location.hash ? window.location.hash : '#contacto';
@@ -22,6 +24,17 @@ const Contact = () => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 950;
 
   return (
     <>
@@ -43,6 +56,8 @@ const Contact = () => {
           <Lines />
 
           <div className="section-2-content" id="formulario">
+            {isMobile && <h1 data-aos="fade-right">CONTACTO</h1>}
+
             <img
               data-aos="fade-right"
               src={contactImage}
