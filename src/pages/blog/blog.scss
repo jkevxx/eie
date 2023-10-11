@@ -26,8 +26,18 @@
       justify-content: center;
       align-items: center;
 
+      @include adapted-content-mobile {
+        gap: 40px;
+      }
+
       h1 {
         font-size: 110px;
+
+        @include adapted-content-mobile {
+          font-size: 46px;
+          text-align: center;
+          line-height: 38px;
+        }
 
         span {
           font-size: 120px;
@@ -42,6 +52,11 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+
+          @include adapted-content-mobile {
+            font-size: 48px;
+            text-align: center;
+          }
         }
       }
 
@@ -50,6 +65,13 @@
         width: 850px;
         text-align: center;
         line-height: 40px;
+
+        @include adapted-content-mobile {
+          width: 300px;
+          font-size: 22px;
+          line-height: 30px;
+          text-align: center;
+        }
       }
     }
   }
@@ -64,6 +86,10 @@
       rgba(37, 54, 76, 1) 75%
     );
 
+    @include adapted-content-mobile {
+      height: 1000px;
+    }
+
     .section-2-content {
       position: relative;
       z-index: 10;
@@ -73,10 +99,18 @@
       align-items: center;
       flex-direction: column;
 
+      @include adapted-content-mobile {
+        height: 100%;
+      }
+
       .title {
         h1 {
           font-size: 80px;
           margin-bottom: 50px;
+
+          @include adapted-content-mobile {
+            font-size: 40px;
+          }
         }
       }
 
@@ -86,6 +120,10 @@
         align-items: center;
         width: 100%;
         gap: 20px;
+
+        @include adapted-content-mobile {
+          flex-wrap: wrap;
+        }
       }
     }
   }
@@ -99,5 +137,9 @@
       rgba(7, 11, 15, 1) 20%,
       rgba(37, 54, 76, 1) 75%
     );
+
+    @include adapted-content-mobile {
+      height: 2400px;
+    }
   }
 }
