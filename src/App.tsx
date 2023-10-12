@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/scroll/ScrollToTop';
 import About from './pages/about/About';
 import Blog from './pages/blog/Blog';
+import BlogDetail from './pages/blogDetail/BlogDetail';
 import Contact from './pages/contact/Contact';
 import Cookies from './pages/cookies/Cookies';
 import Events from './pages/events/Events';
@@ -20,6 +21,8 @@ function App() {
           <Route path="/quienes-somos" element={<About />} />
           <Route path="/eventos" element={<Events />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:articleId" element={<BlogDetail />} />
+
           <Route path="/contacto" element={<Contact />} />
           <Route path="/aviso-de-privacidad" element={<Privacity />} />
           <Route path="/cookies" element={<Cookies />} />

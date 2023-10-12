@@ -34,29 +34,29 @@ export const articles = [
     id: "1",
     title: "Impulsarán a emprendedores en Expo Independencia económica",
     text: "La tercera edición de Expo Independencia Económica (EIE) se acerca, y con ella, la oportunidad de descubrir los secretos que te llevarán a un buen camino en materia de finanzas personales.",
-    image: "./images/mano-sosteniendo-moneda-mexicana.webp",
-    link: "https://www.eltiempo.com/empresas/impulsar-a-emprendedores-en-expo-independencia-economico-20211127",
+    image: "/images/mano-sosteniendo-moneda-mexicana.webp",
+    date: "1 Diciembre, 2021"
   },
   {
     id: "2",
     title: "Evolucionar a mentalidad triunfadora, el llamado a participar en la EIE",
     text: "Evolucionar a mentalidad triunfadora, el llamado a participar en la EIE.",
-    image: "./images/crecimiento-mi-empresa-es-impresionante.webp",
-    link: "https://www.eltiempo.com/empresas/evolucionar-a-mentalidad-triunfadora-el-llamado-a-participar-en-la-eie-20211127",
+    image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
+    date: "24 Octubre, 2021"
   },
   {
     id: "3",
     title: "¿Quieres tener independencia económica?",
     text: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
-    image: "./images/mano-sosteniendo-moneda-mexicana.webp",
-    link: "https://www.eltiempo.com/empresas/evolucionar-a-mentalidad-triunfadora-el-llamado-a-participar-en-la-eie-20211127",
+    image: "/images/mano-sosteniendo-moneda-mexicana.webp",
+    date: "12 Noviembre, 2021"
   },
   {
     id: "4",
     title: "Presentan la 3era edición de Expo independencia económica",
     text: "¡México es un país multimillonario! speakers EIE.",
-    image: "./images/crecimiento-mi-empresa-es-impresionante.webp",
-    link: "https://www.eltiempo.com/empresas/evolucionar-a-mentalidad-triunfadora-el-llamado-a-participar-en-la-eie-20211127",
+    image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
+    date: "9 Febrero, 2021"
   }
 ]
 

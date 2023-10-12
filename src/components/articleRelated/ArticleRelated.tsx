@@ -1,14 +1,23 @@
 import { useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
-import { articles } from '../../data';
-import './article.scss';
+import './articleRelated.scss';
 
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Article = () => {
+type articleRelatedProps = {
+  articles: {
+    id: string;
+    title: string;
+    text: string;
+    image: string;
+    date: string;
+  }[];
+};
+
+const ArticleRelated = ({ articles }: articleRelatedProps) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -16,7 +25,7 @@ const Article = () => {
   return (
     <div className="article">
       <div data-aos="fade-up" className="title">
-        <h1>ARTÍCULO</h1>
+        <h1>Artículos Relacionados</h1>
       </div>
       <div className="article-body">
         {articles.map((article) => (
@@ -40,4 +49,4 @@ const Article = () => {
   );
 };
 
-export default Article;
+export default ArticleRelated;
