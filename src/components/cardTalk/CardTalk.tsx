@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './cardTalk.scss';
 
 // importing aos
@@ -16,7 +17,7 @@ const CardTalk = ({ name, image }: Props) => {
 
   return (
     <div data-aos="fade-down" className="talk">
-      <img src={image} alt={name} />
+      <LazyLoadImage src={image} alt={name} />
       <div>
         <h1>{name}</h1>
       </div>

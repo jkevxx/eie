@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './speaker.scss';
 
 // importing aos
@@ -32,7 +33,7 @@ const Speaker = ({ image, name, description }: Props) => {
 
   return (
     <div className="speaker-card">
-      <img data-aos="fade-up" src={image} alt={name} />
+      <LazyLoadImage data-aos="fade-up" src={image} alt={name} />
 
       {isMobile ? (
         <>

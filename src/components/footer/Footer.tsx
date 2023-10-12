@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import blueberry from '../../assets/images/blueberry.gif';
 import eieLogo from '../../assets/svg/eie-logo.svg';
@@ -44,7 +45,7 @@ const Footer = () => {
             {isMobile ? (
               <>
                 <div data-aos="fade-up" className="eie-logo">
-                  <img src={eieLogo} alt="EIE logo" />
+                  <LazyLoadImage src={eieLogo} alt="EIE logo" />
                 </div>
                 <div data-aos="fade-up" className="social-networks">
                   <p>Síguenos en nuestras redes sociales</p>
@@ -55,28 +56,28 @@ const Footer = () => {
                     target="_blank"
                     aria-label="Instagram link"
                   >
-                    <img src={instaIcon} alt="instagram icon" />
+                    <LazyLoadImage src={instaIcon} alt="instagram icon" />
                   </a>
                   <a
                     href="https://www.facebook.com/profile.php?id=100083817837197"
                     target="_blank"
                     aria-label="Facebook link"
                   >
-                    <img src={faceIcon} alt="facebook icon" />
+                    <LazyLoadImage src={faceIcon} alt="facebook icon" />
                   </a>
                   <a
                     href="https://www.tiktok.com/@eie.mx"
                     target="_blank"
                     aria-label="Tiktok link"
                   >
-                    <img src={tiktokIcon} alt="tiktok icon" />
+                    <LazyLoadImage src={tiktokIcon} alt="tiktok icon" />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
                     target="_blank"
                     aria-label="linkedin link"
                   >
-                    <img src={linkedinIcon} alt="linkedin icon" />
+                    <LazyLoadImage src={linkedinIcon} alt="linkedin icon" />
                   </a>
                 </div>
               </>
@@ -90,34 +91,34 @@ const Footer = () => {
                       target="_blank"
                       aria-label="Instagram link"
                     >
-                      <img src={instaIcon} alt="instagram icon" />
+                      <LazyLoadImage src={instaIcon} alt="instagram icon" />
                     </a>
                     <a
                       href="https://www.facebook.com/profile.php?id=100083817837197"
                       target="_blank"
                       aria-label="Facebook link"
                     >
-                      <img src={faceIcon} alt="facebook icon" />
+                      <LazyLoadImage src={faceIcon} alt="facebook icon" />
                     </a>
                     <a
                       href="https://www.tiktok.com/@eie.mx"
                       target="_blank"
                       aria-label="Tiktok link"
                     >
-                      <img src={tiktokIcon} alt="tiktok icon" />
+                      <LazyLoadImage src={tiktokIcon} alt="tiktok icon" />
                     </a>
                     <a
                       href="https://www.linkedin.com/company/expo-independencia-econ%C3%B3mica/"
                       target="_blank"
                       aria-label="linkedin link"
                     >
-                      <img src={linkedinIcon} alt="linkedin icon" />
+                      <LazyLoadImage src={linkedinIcon} alt="linkedin icon" />
                     </a>
                   </div>
                 </div>
 
                 <div data-aos="fade-up" className="eie-logo">
-                  <img src={eieLogo} alt="EIE logo" />
+                  <LazyLoadImage src={eieLogo} alt="EIE logo" />
                 </div>
               </>
             )}
@@ -178,7 +179,7 @@ const Footer = () => {
               los Derechos reservados
             </p>
             <div className="footer-image">
-              <img src={blueberry} alt="we are blueberry" />
+              <LazyLoadImage src={blueberry} alt="we are blueberry" />
             </div>
           </div>
         </div>

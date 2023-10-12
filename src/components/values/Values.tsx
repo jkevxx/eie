@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { iconsAbout } from '../../data';
 import './values.scss';
 
@@ -15,7 +16,11 @@ function Values() {
     <div className="values-icon">
       {iconsAbout.map((icon) => (
         <div data-aos="fade-down" key={icon.id}>
-          <img data-aos="fade-right" src={icon.image} alt={icon.name} />
+          <LazyLoadImage
+            data-aos="fade-right"
+            src={icon.image}
+            alt={icon.name}
+          />
         </div>
       ))}
     </div>

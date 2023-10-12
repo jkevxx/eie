@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { NavLink } from 'react-router-dom';
 import closeIcon from '../../assets/svg/close.svg';
 import eieLogo from '../../assets/svg/eie-logo.svg';
@@ -30,13 +31,13 @@ const Menu = ({ colorName }: Props) => {
   return (
     <nav className="menu">
       <div className="menu-logo">
-        <img src={eieLogo} alt="logo EIE" />
+        <LazyLoadImage src={eieLogo} alt="logo EIE" />
       </div>
 
       {isMobile ? (
         <>
           <div className="mobile-menu" onClick={() => setMenuBar(!menuBar)}>
-            <img src={menuBar ? closeIcon : menuIcon} alt="menu" />
+            <LazyLoadImage src={menuBar ? closeIcon : menuIcon} alt="menu" />
           </div>
 
           <div className={`menu-links white ${menuBar ? 'active-menu' : ''}`}>
@@ -73,21 +74,21 @@ const Menu = ({ colorName }: Props) => {
                 target="_blank"
                 aria-label="Facebook link"
               >
-                <img src={faceIcon} alt="facebook icon" />
+                <LazyLoadImage src={faceIcon} alt="facebook icon" />
               </a>
               <a
                 href="https://www.instagram.com/eie.mx/"
                 target="_blank"
                 aria-label="Instagram link"
               >
-                <img src={instaIcon} alt="instagram icon" />
+                <LazyLoadImage src={instaIcon} alt="instagram icon" />
               </a>
               <a
                 href="https://www.tiktok.com/@eie.mx"
                 target="_blank"
                 aria-label="Tiktok link"
               >
-                <img src={tiktokIcon} alt="tiktok icon" />
+                <LazyLoadImage src={tiktokIcon} alt="tiktok icon" />
               </a>
             </div>
           </div>

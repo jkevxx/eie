@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import { articles } from '../../data';
 import './article.scss';
@@ -24,7 +25,7 @@ const Article = () => {
             className="article-content"
             key={article.id}
           >
-            <img src={article.image} alt={article.text} />
+            <LazyLoadImage src={article.image} alt={article.text} />
             <h1>{article.title}</h1>
             <p>{article.text}</p>
             <div className="article-btn">

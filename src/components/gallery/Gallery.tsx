@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './gallery.scss';
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 const Gallery = ({ image, name }: Props) => {
   return (
     <div className="gallery-image">
-      <img src={image} alt={name} />
+      <LazyLoadImage src={image} alt={name} />
     </div>
   );
 };

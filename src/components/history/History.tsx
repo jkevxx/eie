@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import icon01 from '../../assets/images/events/01-icon.webp';
 import icon02 from '../../assets/images/events/02-icon.webp';
 import icon03 from '../../assets/images/events/03-icon.webp';
@@ -37,7 +38,7 @@ const History = () => {
           <div data-aos="fade-down" className="history-section-1">
             <div className="history-info">
               <div className="number-img">
-                <img src={icon01} alt="primer evento" />
+                <LazyLoadImage src={icon01} alt="primer evento" />
               </div>
               <h2>13 de Octubre de 2022</h2>
               <p>
@@ -47,13 +48,13 @@ const History = () => {
                 reconocidos a nivel nacional e internacional.
               </p>
             </div>
-            <img src={historyImg1} alt={historyImg1} />
+            <LazyLoadImage src={historyImg1} alt={historyImg1} />
           </div>
 
           <div data-aos="fade-down" className="history-section-2">
             <div className="history-info">
               <div className="number-img">
-                <img src={icon02} alt="segundo evento" />
+                <LazyLoadImage src={icon02} alt="segundo evento" />
               </div>
               <h2>16 de febrero de 2023</h2>
               <p>
@@ -62,13 +63,13 @@ const History = () => {
                 como segunda edición en Palcco, en la ciudad de Guadalajara.
               </p>
             </div>
-            <img src={historyImg2} alt={historyImg2} />
+            <LazyLoadImage src={historyImg2} alt={historyImg2} />
           </div>
 
           <div data-aos="fade-down" className="history-section-3">
             <div className="history-info">
               <div className="number-img">
-                <img src={icon03} alt="tercer evento" />
+                <LazyLoadImage src={icon03} alt="tercer evento" />
               </div>
               <h2>13 de Noviembre de 2023</h2>
               <p>
@@ -78,16 +79,16 @@ const History = () => {
                 y Oso Trava.
               </p>
             </div>
-            <img src={historyImg3} alt={historyImg3} />
+            <LazyLoadImage src={historyImg3} alt={historyImg3} />
           </div>
         </>
       ) : (
         <>
           <div data-aos="fade-down" className="history-section-1">
-            <img src={historyImg1} alt={historyImg1} />
+            <LazyLoadImage src={historyImg1} alt={historyImg1} />
             <div className="history-info">
               <div className="number-img">
-                <img src={icon02} alt="segundo evento" />
+                <LazyLoadImage src={icon02} alt="segundo evento" />
               </div>
               <h2>16 de febrero de 2023</h2>
               <p>
@@ -96,7 +97,7 @@ const History = () => {
                 como segunda edición en Palcco, en la ciudad de Guadalajara.
               </p>
             </div>
-            <img src={historyImg3} alt={historyImg3} />
+            <LazyLoadImage src={historyImg3} alt={historyImg3} />
           </div>
 
           <div data-aos="fade-up" className="timeline">
@@ -110,7 +111,7 @@ const History = () => {
           <div data-aos="fade-right" className="history-section-2">
             <div className="history-info">
               <div className="number-img">
-                <img src={icon01} alt="primer evento" />
+                <LazyLoadImage src={icon01} alt="primer evento" />
               </div>
               <h2>13 de Octubre de 2022</h2>
               <p>
@@ -121,11 +122,11 @@ const History = () => {
               </p>
             </div>
 
-            <img src={historyImg2} alt={historyImg2} />
+            <LazyLoadImage src={historyImg2} alt={historyImg2} />
 
             <div className="history-info">
               <div className="number-img">
-                <img src={icon03} alt="tercer evento" />
+                <LazyLoadImage src={icon03} alt="tercer evento" />
               </div>
               <h2>13 de Noviembre de 2023</h2>
               <p>

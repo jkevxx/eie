@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import BlogForm from '../../components/blog/BlogForm';
 import Edition from '../../components/edition/Edition';
 import Footer from '../../components/footer/Footer';
@@ -108,7 +109,7 @@ const Events = () => {
             </div>
             {isMobile ? (
               <>
-                <img
+                <LazyLoadImage
                   data-aos="fade-up"
                   src={aimedPeopleResponsive}
                   alt="speakers"
@@ -116,7 +117,11 @@ const Events = () => {
               </>
             ) : (
               <>
-                <img data-aos="fade-up" src={aimedPeople} alt="speakers" />
+                <LazyLoadImage
+                  data-aos="fade-up"
+                  src={aimedPeople}
+                  alt="speakers"
+                />
               </>
             )}
           </div>

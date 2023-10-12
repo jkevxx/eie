@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import doubleQuotation from '../../assets/images/double-quotation-marks.webp';
 import './cardTestimony.scss';
 
@@ -36,15 +37,15 @@ const CardTestimony = ({ name, testimony, image }: Props) => {
         <>
           <div>
             <p className="testimony-name">{name}</p>
-            <img src={image} alt={name} />
+            <LazyLoadImage src={image} alt={name} />
             <p>{testimony}</p>
           </div>
         </>
       ) : (
         <>
-          <img src={image} alt={name} />
+          <LazyLoadImage src={image} alt={name} />
           <div>
-            <img src={doubleQuotation} alt={doubleQuotation} />
+            <LazyLoadImage src={doubleQuotation} alt={doubleQuotation} />
             <p>{testimony}</p>
             <p className="testimony-name">{name}</p>
           </div>

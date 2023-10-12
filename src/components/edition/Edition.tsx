@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import edition1 from '../../assets/images/events/edicion-1.webp';
 import edition2 from '../../assets/images/events/edicion-2.webp';
 import edition3 from '../../assets/images/events/edicion-3.webp';
+import Slider from '../slider/Slider';
 
 import { galleryAbout, galleryEvents } from '../../data';
 import Gallery from '../gallery/Gallery';
@@ -10,7 +12,6 @@ import './edition.scss';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Slider from '../slider/Slider';
 
 const Edition = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -43,7 +44,7 @@ const Edition = () => {
           onClick={() => handleTabClick('tab1')}
         >
           <h1>1ª EDICIÓN</h1>
-          <img src={edition1} alt="primera edición" />
+          <LazyLoadImage src={edition1} alt="primera edición" />
         </div>
 
         <div
@@ -51,7 +52,7 @@ const Edition = () => {
           onClick={() => handleTabClick('tab2')}
         >
           <h1>2ª EDICIÓN</h1>
-          <img src={edition2} alt="primera edición" />
+          <LazyLoadImage src={edition2} alt="primera edición" />
         </div>
 
         <div
@@ -59,7 +60,7 @@ const Edition = () => {
           onClick={() => handleTabClick('tab3')}
         >
           <h1>3ª EDICIÓN</h1>
-          <img src={edition3} alt="primera edición" />
+          <LazyLoadImage src={edition3} alt="primera edición" />
         </div>
       </div>
 

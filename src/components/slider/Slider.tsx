@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import leftArrow from '../../assets/svg/left-arrow.svg';
 import rightArrow from '../../assets/svg/right-arrow.svg';
 import './slider.scss';
@@ -34,16 +35,16 @@ const Slider = ({ gallery }: Props) => {
   return (
     <div className="gallery-carousel">
       <div className="container-images">
-        <img
+        <LazyLoadImage
           className="image"
           src={selectedImage.image}
           alt={selectedImage.name}
         />
         <div className="leftArrow" onClick={previous}>
-          <img src={leftArrow} alt="left-arrow" />
+          <LazyLoadImage src={leftArrow} alt="left-arrow" />
         </div>
         <div className="rightArrow" onClick={next}>
-          <img src={rightArrow} alt="right-arrow" />
+          <LazyLoadImage src={rightArrow} alt="right-arrow" />
         </div>
       </div>
     </div>

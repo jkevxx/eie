@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import contactImage from '../../assets/images/sergio-y-marco.webp';
 import BlogForm from '../../components/blog/BlogForm';
 import Footer from '../../components/footer/Footer';
@@ -58,7 +59,7 @@ const Contact = () => {
           <div className="section-2-content" id="formulario">
             {isMobile && <h1 data-aos="fade-right">CONTACTO</h1>}
 
-            <img
+            <LazyLoadImage
               data-aos="fade-right"
               src={contactImage}
               alt="Sergio y Marco"

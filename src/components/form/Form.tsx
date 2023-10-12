@@ -48,7 +48,6 @@ const Form = ({ title }: Props) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form);
     // axios.put(`/api/`, form);
     setForm(initialFormState);
     setPhoneNumber('');

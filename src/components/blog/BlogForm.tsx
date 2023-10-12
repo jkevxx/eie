@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import blogImage from '../../assets/images/sergio.webp';
 import './blogForm.scss';
 
@@ -17,9 +18,12 @@ const BlogForm = () => {
   const [emailValue, setEmailValue] = useState<Email>(initialFormState);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailValue({ ...emailValue, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(emailValue);
     // axios.put(`/api/`, email);
     setEmailValue(initialFormState);
   };
@@ -47,7 +51,7 @@ const BlogForm = () => {
         {!isMobile && (
           <>
             <div data-aos="fade-left" className="blog-image">
-              <img src={blogImage} alt={blogImage} />
+              <LazyLoadImage src={blogImage} alt={blogImage} />
             </div>
           </>
         )}
@@ -65,12 +69,7 @@ const BlogForm = () => {
               value={emailValue.email || ''}
               required
               placeholder="Escribe tu correo electrónico"
-              onChange={(e) =>
-                setEmailValue({
-                  ...emailValue,
-                  [e.target.name]: e.target.value,
-                })
-              }
+              onChange={handleEmailChange}
             />
             <div className="form-btn">
               <button type="submit">

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 
 import Article from '../../components/article/Article';
@@ -87,8 +88,11 @@ const Home = () => {
             <VideoPlayer />
 
             <div data-aos="fade-down" className="icons">
-              <img src={eieLogo} alt="eie logo" />
-              <img src={auditorioTelmex} alt="auditorio telmex icon" />
+              <LazyLoadImage src={eieLogo} alt="eie logo" />
+              <LazyLoadImage
+                src={auditorioTelmex}
+                alt="auditorio telmex icon"
+              />
               <span>3RA EDICIÓN</span>
             </div>
 
@@ -103,7 +107,11 @@ const Home = () => {
                       para lograr tu Independencia Económica.
                     </p>
                   </div>
-                  <img data-aos="fade-right" src={groupPeople} alt="speakers" />
+                  <LazyLoadImage
+                    data-aos="fade-right"
+                    src={groupPeople}
+                    alt="speakers"
+                  />
                   <div data-aos="fade-up" className="more-info">
                     <p>¡COMPRA TUS BOLETOS HOY MISMO!</p>
                     <a
@@ -118,7 +126,11 @@ const Home = () => {
                 </>
               ) : (
                 <>
-                  <img data-aos="fade-right" src={groupPeople} alt="speakers" />
+                  <LazyLoadImage
+                    data-aos="fade-right"
+                    src={groupPeople}
+                    alt="speakers"
+                  />
                   <div className="info-details">
                     <div data-aos="fade-up" className="dates">
                       <h1>09 DE NOVIEMBRE</h1>
