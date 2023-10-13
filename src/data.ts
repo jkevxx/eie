@@ -1,13 +1,13 @@
 export const testimonials = [
   {
-    name: "Laura Gonzáles",
-    testimony: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    name: "Mónica Salinas",
+    testimony: "Las conferencias de EIE han sido una fuente inagotable de inspiración y conocimiento. Cada speaker me ha brindado herramientas valiosas que estoy implementando en mi camino hacia la independencia económica.",
     image: "./images/laura-gonzales.webp"
 
   },
   {
-    name: "Pedro Ramírez",
-    testimony: " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    name: "Carlos Fernández",
+    testimony: "Antes de asistir a EIE, sentía que me faltaba dirección en mi emprendimiento. Pero después de escuchar a estos líderes empresariales, tengo una visión clara y renovada de lo que quiero lograr.",
     image: "./images/pedro-ramirez.webp"
 
   }

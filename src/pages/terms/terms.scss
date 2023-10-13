@@ -3,15 +3,28 @@
 
   .section {
     width: 100%;
-    height: 80vh;
+    height: auto;
     position: relative;
     z-index: 10;
+    padding-top: 8rem;
     font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 4rem;
+
+    p{
+      margin-top: 1rem;
+    }
+
+    ol{
+      margin-top: 1rem;
+      padding-left: 5%;
+      padding-right: 5%;
+      li{
+        margin-top: 1rem;
+      }
+    }
   }
 
-  .section-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
