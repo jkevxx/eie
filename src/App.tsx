@@ -7,7 +7,7 @@ import Contact from './pages/contact/Contact';
 import Cookies from './pages/cookies/Cookies';
 import Events from './pages/events/Events';
 import Home from './pages/home/Home';
-import Privacity from './pages/privacity/Privacity';
+import Privacy from './pages/privacy/Privacy';
 import Terms from './pages/terms/Terms';
 import './styles/global.scss';
 
@@ -24,7 +24,7 @@ function App() {
           <Route path="/blog/:articleId" element={<BlogDetail />} />
 
           <Route path="/contacto" element={<Contact />} />
-          <Route path="/aviso-de-privacidad" element={<Privacity />} />
+          <Route path="/aviso-de-privacidad" element={<Privacy />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/terminos-y-condiciones" element={<Terms />} />
           <Route path="*" element={<h1>Page not found 404</h1>} />

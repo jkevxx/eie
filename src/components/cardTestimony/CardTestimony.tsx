@@ -45,7 +45,11 @@ const CardTestimony = ({ name, testimony, image }: Props) => {
         <>
           <LazyLoadImage src={image} alt={name} />
           <div>
-            <LazyLoadImage src={doubleQuotation} alt={doubleQuotation} />
+            <LazyLoadImage
+              className="double-quotation"
+              src={doubleQuotation}
+              alt={doubleQuotation}
+            />
             <p>{testimony}</p>
             <p className="testimony-name">{name}</p>
           </div>
