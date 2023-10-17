@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import './form.scss';
 
 // importing aos
@@ -46,9 +47,24 @@ const Form = ({ title }: Props) => {
     setForm({ ...form, phoneNumber: formattedPhoneNumber.split(' ').join('') });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // axios.put(`/api/`, form);
+
+    await axios.get('http://127.0.0.1:8000/api/get-csrf-token') 
+    .then(response =>  {
+      console.log(response.data.csrf_token);
+      const csrfToken = response.data.csrf_token;
+      axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
+      form._token = csrfToken;
+      console.log(form);
+      const request = axios.post(`http://127.0.0.1:8000/api/hola`, form);
+      console.log('Respuesta del servidor:', request);
+    })
+    .catch(error => {
+      console.error('Error al obtener el token CSRF', error);
+    });
+
+   
     setForm(initialFormState);
     setPhoneNumber('');
   };
