@@ -30,19 +30,22 @@ const BlogDetail = () => {
           <Lines />
           <div className="section-1-content">
             <div className="article-detail">
+              <div className="article-date">
+                <img src={calendarIcon} alt="Calendar Icon" />
+                <span>{article?.date}</span>
+              </div>
+
+              <h1 className="article-title">{article?.title}</h1>
+
+              <p className="article-subtitle">{article?.subtitle}</p>
+
               <img
                 className="article-image"
                 src={article?.image}
                 alt={article?.title}
               />
-              <div className="article-content">
-                <div className="article-date">
-                  <img src={calendarIcon} alt="Calendar Icon" />
-                  <span>{article?.date}</span>
-                </div>
-                <h1>{article?.title}</h1>
-                <p>{article?.text}</p>
-              </div>
+
+              <p className="article-paragraph">{article?.paragraph}</p>
             </div>
           </div>
         </section>

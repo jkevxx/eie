@@ -3,7 +3,7 @@
 .blogDetail {
   .section {
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     position: relative;
     z-index: 10;
     font-family: 'AkzidenzGroteskBQ-Light', sans-serif;
@@ -20,8 +20,9 @@
 
     .section-1-content {
       width: 100%;
-      height: 100vh;
+      // height: 100vh;
       display: flex;
+
       justify-content: center;
       align-items: center;
 
@@ -29,54 +30,47 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 1200px;
+        flex-direction: column;
+        max-width: 1200px;
         padding: 20px;
+        margin: 80px 0 40px 0;
         gap: 20px;
 
-        @include adapted-content-mobile {
-          flex-direction: column;
+        .article-date {
+          width: 190px;
+          height: 40px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 14px;
+          font-weight: bold;
+          gap: 5px;
+          align-self: flex-start;
+        }
+
+        .article-title {
+          font-size: 48px;
+          font-family: 'Inter-Bold', sans-serif;
+
+          @include adapted-content-mobile {
+            font-size: 30px;
+          }
+        }
+
+        .article-subtitle,
+        .article-paragraph {
+          font-size: 20px;
         }
 
         .article-image {
-          width: 400px;
-          height: 400px;
+          max-width: 1200px;
+          width: 100%;
+          height: 600px;
           object-fit: cover;
-          border-radius: 10px;
 
           @include adapted-content-mobile {
+            height: 320px;
             width: 320px;
-            height: 260px;
-          }
-        }
-
-        .article-content {
-          height: 400px;
-
-          @include adapted-content-mobile {
-            height: 100%;
-          }
-
-          .article-date {
-            width: 190px;
-            height: 40px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            gap: 5px;
-          }
-
-          img {
-            position: relative;
-            top: -2px;
-          }
-
-          p {
-            height: 100px;
-            width: 100%;
-            margin-top: 30px;
           }
         }
       }

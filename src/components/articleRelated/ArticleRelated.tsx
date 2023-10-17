@@ -11,7 +11,7 @@ type articleRelatedProps = {
   articles: {
     id: string;
     title: string;
-    text: string;
+    subtitle: string;
     image: string;
     date: string;
   }[];
@@ -34,9 +34,9 @@ const ArticleRelated = ({ articles }: articleRelatedProps) => {
             className="article-content"
             key={article.id}
           >
-            <LazyLoadImage src={article.image} alt={article.text} />
+            <LazyLoadImage src={article.image} alt={article.date} />
             <h1>{article.title}</h1>
-            <p>{article.text}</p>
+            <p>{article.subtitle}</p>
             <div className="article-btn">
               <Link to={`/blog/${article.id}`} className="article-link">
                 <span>Ver más</span>
