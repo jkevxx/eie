@@ -1,16 +1,54 @@
-import { useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Link } from 'react-router-dom';
-import { articles } from '../../data';
+import { useEffect, useState } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import ArticleItem from './ArticleItem';
 import './article.scss';
 
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { getArticles } from '../../api/articleApi';
+
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+    slidesToSlide: 3,
+    // partialVisibilityGutter: 40,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3,
+    slidesToSlide: 2,
+    // partialVisibilityGutter: 30,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+    // partialVisibilityGutter: 30,
+  },
+};
 
 const Article = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  const getAllArticles = async () => {
+    try {
+      const response = await getArticles();
+      setData(response);
+      setLoading(false);
+    } catch (error) {
+      setError('Error fetching data');
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     AOS.init();
+    getAllArticles();
   }, []);
 
   return (
@@ -18,24 +56,24 @@ const Article = () => {
       <div data-aos="fade-up" className="title">
         <h1>ARTÍCULO</h1>
       </div>
-      <div className="article-body">
-        {articles.map((article) => (
-          <div
-            data-aos="fade-right"
-            className="article-content"
-            key={article.id}
-          >
-            <LazyLoadImage src={article.image} alt={article.date} />
-            <h1>{article.title}</h1>
-            <p>{article.subtitle}</p>
-            <div className="article-btn">
-              <Link to={`/blog/${article.id}`} className="article-link">
-                <span>Ver más</span>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : (
+        <Carousel
+          className="article-body"
+          responsive={responsive}
+          draggable={true}
+          ssr={true}
+          containerClass="carousel-container"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {data.map((article) => (
+            <ArticleItem article={article} key={article['id']} />
+          ))}
+        </Carousel>
+      )}
     </div>
   );
 };

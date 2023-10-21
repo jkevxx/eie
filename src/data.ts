@@ -32,7 +32,7 @@ export const talks = [
 export const articles = [
   {
     id: "1",
-    title: "Impulsarán a emprendedores en Expo Independencia económica",
+    title: "Impulsarán a emprendedores en Expo Independencia económica 1",
     subtitle: "La tercera edición de Expo Independencia Económica (EIE) se acerca, y con ella, la oportunidad de descubrir los secretos que te llevarán a un buen camino en materia de finanzas personales.",
     image: "/images/mano-sosteniendo-moneda-mexicana.webp",
     date: "1 Diciembre, 2021",
@@ -41,7 +41,7 @@ export const articles = [
   },
   {
     id: "2",
-    title: "Evolucionar a mentalidad triunfadora, el llamado a participar en la EIE",
+    title: "Evolucionar a mentalidad triunfadora, el llamado a participar en la EIE 2",
     subtitle: "Evolucionar a mentalidad triunfadora, el llamado a participar en la EIE.",
     image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
     date: "24 Octubre, 2021",
@@ -49,7 +49,7 @@ export const articles = [
   },
   {
     id: "3",
-    title: "¿Quieres tener independencia económica?",
+    title: "¿Quieres tener independencia económica? 3",
     subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
     image: "/images/mano-sosteniendo-moneda-mexicana.webp",
     date: "12 Noviembre, 2021",
@@ -57,12 +57,60 @@ export const articles = [
   },
   {
     id: "4",
-    title: "Presentan la 3era edición de Expo independencia económica",
+    title: "Presentan la 3era edición de Expo independencia económica 4",
     subtitle: "¡México es un país multimillonario! speakers EIE.",
     image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
     date: "9 Febrero, 2021",
     paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla."
-  }
+  },
+  {
+    id: "5",
+    title: "¿Quieres tener independencia económica? 5",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/mano-sosteniendo-moneda-mexicana.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
+  {
+    id: "6",
+    title: "¿Quieres tener independencia económica? 6",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
+  {
+    id: "7",
+    title: "¿Quieres tener independencia económica? 7",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/mano-sosteniendo-moneda-mexicana.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
+  {
+    id: "8",
+    title: "¿Quieres tener independencia económica? 8",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
+  {
+    id: "9",
+    title: "¿Quieres tener independencia económica? 9",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/mano-sosteniendo-moneda-mexicana.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
+  {
+    id: "10",
+    title: "¿Quieres tener independencia económica? 10",
+    subtitle: "Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex. Estas preguntas y muchas más podrán ser resueltas en la próxima edición de la Expo Independencia Económica el 9 de noviembre en el Auditorio Telmex.",
+    image: "/images/crecimiento-mi-empresa-es-impresionante.webp",
+    date: "12 Noviembre, 2021",
+    paragraph: "Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Et netus et malesuada fames ac turpis. At tellus at urna condimentum mattis pellentesque id. Metus aliquam eleifend mi in. Varius vel pharetra vel turpis nunc eget lorem dolor. Bibendum enim facilisis gravida neque convallis a. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Fermentum et sollicitudin ac orci. Auctor neque vitae tempus quam pellentesque nec nam aliquam sem. Fames ac turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Fringilla ut morbi tincidunt augue interdum. Lacus sed viverra tellus in. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. "
+  },
 ]
 
 export const galleryEvents = [
