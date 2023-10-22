@@ -23,6 +23,7 @@ import './home.scss';
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import WhatsApp from '../../components/whatsApp/WhatsApp';
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -45,6 +46,7 @@ const Home = () => {
   return (
     <>
       <Menu colorName="white" />
+      <WhatsApp />
       <div className="home">
         <video className="section bg-video" autoPlay loop muted>
           <source src={homeVideo} type="video/mp4" />

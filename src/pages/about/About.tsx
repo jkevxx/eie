@@ -4,14 +4,15 @@ import Footer from '../../components/footer/Footer';
 import Gallery from '../../components/gallery/Gallery';
 import Lines from '../../components/lines/Lines';
 import Menu from '../../components/menu/Menu';
+import Slider from '../../components/slider/Slider';
 import Values from '../../components/values/Values';
+import WhatsApp from '../../components/whatsApp/WhatsApp';
 import { galleryAbout } from '../../data';
 import './about.scss';
 
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Slider from '../../components/slider/Slider';
 
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -34,6 +35,7 @@ const About = () => {
   return (
     <>
       <Menu colorName="white" />
+      <WhatsApp />
       <div className="about">
         <section className="section bg-image"></section>
 

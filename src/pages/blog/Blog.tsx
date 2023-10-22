@@ -5,6 +5,7 @@ import CardTalk from '../../components/cardTalk/CardTalk';
 import Footer from '../../components/footer/Footer';
 import Lines from '../../components/lines/Lines';
 import Menu from '../../components/menu/Menu';
+import WhatsApp from '../../components/whatsApp/WhatsApp';
 import { talks } from '../../data';
 import './blog.scss';
 
@@ -20,6 +21,7 @@ const Blog = () => {
   return (
     <>
       <Menu colorName="white" />
+      <WhatsApp />
       <div className="blog">
         <section className="section section-1">
           <Lines />

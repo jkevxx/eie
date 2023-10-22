@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
+import Carousel from 'react-multi-carousel';
 import { useParams } from 'react-router-dom';
 import { getArticles } from '../../api/articleApi';
 import calendarIcon from '../../assets/svg/calendar.svg';
+import ArticleItem from '../../components/article/ArticleItem';
 import Footer from '../../components/footer/Footer';
 import Lines from '../../components/lines/Lines';
 import Menu from '../../components/menu/Menu';
-// import { articles } from '../../data';
-import Carousel from 'react-multi-carousel';
-import ArticleItem from '../../components/article/ArticleItem';
 import './blogDetail.scss';
 
 const responsive = {

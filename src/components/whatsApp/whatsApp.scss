@@ -1,0 +1,85 @@
+.parent {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  z-index: 40;
+  bottom: 115px;
+}
+
+.heart {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: linear-gradient(to bottom, #03e27b, #0dbf6d);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2);
+  animation: beat 1.5s ease 0s infinite;
+}
+
+.heart img {
+  color: white;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 4;
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #03e27b;
+  opacity: 0.4;
+  border-radius: inherit;
+}
+
+.heart a {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.heart:before {
+  z-index: 2;
+  animation: beat-before 1.5s ease 100ms infinite;
+}
+
+.heart:after {
+  z-index: 3;
+  animation: beat-after 1.5s ease 200ms infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes beat-before {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes beat-after {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}

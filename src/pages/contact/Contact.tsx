@@ -7,6 +7,7 @@ import Form from '../../components/form/Form';
 import Lines from '../../components/lines/Lines';
 import Menu from '../../components/menu/Menu';
 import Ticket from '../../components/ticket/Ticket';
+import WhatsApp from '../../components/whatsApp/WhatsApp';
 import './contact.scss';
 
 // importing aos
@@ -40,6 +41,7 @@ const Contact = () => {
   return (
     <>
       <Menu colorName="white" />
+      <WhatsApp />
       <div className="contact">
         <section className="section bg-image"></section>
 

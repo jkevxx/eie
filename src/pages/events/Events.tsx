@@ -8,6 +8,7 @@ import Lines from '../../components/lines/Lines';
 import Menu from '../../components/menu/Menu';
 import Speaker from '../../components/speaker/Speaker';
 import Ticket from '../../components/ticket/Ticket';
+import WhatsApp from '../../components/whatsApp/WhatsApp';
 
 import aimedPeopleResponsive from '../../assets/images/events/aimed-at-events-responsive-phone.webp';
 import aimedPeople from '../../assets/images/events/aimed-at-events.webp';
@@ -40,6 +41,7 @@ const Events = () => {
   return (
     <>
       <Menu colorName="white" />
+      <WhatsApp />
       <div className="events">
         <video className="section bg-video" autoPlay loop muted>
           <source src={eventVideo} type="video/mp4" />
