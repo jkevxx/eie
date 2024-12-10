@@ -1,32 +1,33 @@
 import { useEffect, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import ArticleItem from './ArticleItem';
 import './article.scss';
+import ArticleItem from './ArticleItem';
 
 // importing aos
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { getArticles } from '../../api/articleApi';
+import { articles } from '../../data';
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 3,
     slidesToSlide: 3,
-    // partialVisibilityGutter: 40,
+    partialVisibilityGutter: 40,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 3,
+    items: 2,
     slidesToSlide: 2,
-    // partialVisibilityGutter: 30,
+    partialVisibilityGutter: 30,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
     slidesToSlide: 1,
-    // partialVisibilityGutter: 30,
+    partialVisibilityGutter: 30,
   },
 };
 
@@ -59,7 +60,21 @@ const Article = () => {
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p>{error}</p>
+        <>
+          <Carousel
+            className="article-body"
+            responsive={responsive}
+            draggable={true}
+            ssr={true}
+            infinite={false}
+            containerClass="container-with-dots"
+            // itemClass="carousel-item-padding-40-px"
+          >
+            {articles.map((article) => (
+              <ArticleItem article={article} key={article.id} />
+            ))}
+          </Carousel>
+        </>
       ) : (
         <Carousel
           className="article-body"

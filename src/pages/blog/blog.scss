@@ -78,17 +78,16 @@
 
   .section-2 {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    // background: rgb(7, 11, 15);
     background: linear-gradient(
       90deg,
       rgba(7, 11, 15, 1) 20%,
       rgba(37, 54, 76, 1) 75%
     );
-
-    @include adapted-content-mobile {
-      height: 1000px;
-    }
 
     .section-2-content {
       position: relative;
@@ -137,9 +136,5 @@
       rgba(7, 11, 15, 1) 20%,
       rgba(37, 54, 76, 1) 75%
     );
-
-    @include adapted-content-mobile {
-      height: 2400px;
-    }
   }
 }
